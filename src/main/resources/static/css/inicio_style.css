@@ -1,0 +1,470 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+body { 
+    background-color: white;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+
+/* estilos de la primera vista de la pagina principal*/
+
+.mainView {
+    background-color: #f0f7ff;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 80px 280px;
+    font-size: 30px;
+    gap: 20px;
+    align-items: center;
+}
+
+.mainView h1{
+    max-width: 1000px;
+}
+
+.mainView p {
+    font-size: 25px;
+    padding: 0px 50px;
+    color: #787878;
+}
+
+#tes {
+    color: #2563eb;
+}
+
+.infoBtn {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+#apoderadoBtn, #conductorBtn {
+    padding: 15px;
+    width: 200px;
+    border: none;
+    color: white;
+    background-color: #2563eb;
+    border-radius: 30px;
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+#conductorBtn {
+    border: solid 2px #2563eb;
+    background-color: white;
+    color: #2563eb;
+}
+
+#apoderadoBtn:hover {
+    background-color: #1e5adc;
+}
+
+#conductorBtn:hover {
+    background-color: #f0f7ff;
+}
+
+/* estilos de la seccion de ¿por que elegirnos?*/
+
+.infoResumen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+    text-align: center;
+    align-items: center;
+}
+
+.infoResumen h1 {
+    margin-bottom: 60px;
+}
+
+.cualidadesBox{
+    display: flex;
+    gap: 35px;
+    width: 1400px;
+}
+
+
+.box{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 10px;
+    padding: 25px;
+    display: flex;
+    width: calc(100%/4);
+    flex-direction: column;
+    gap: 20px;
+    align-items: baseline;
+    text-align: left;
+    font-size: 25px;
+    margin-bottom: 80px;
+    color: #2563eb;
+}
+
+.box:hover {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 6px 15px;
+}
+
+.box p {
+    font-size: 20px;
+    color: #787878;
+}
+
+.box h2 {
+    font-size: 22px;
+    color: black;
+}
+
+.icon {
+    background-color: #f0f7ff;
+    padding: 20px;
+    border-radius: 50%;
+}
+
+/* seccion apoderados y conductores en pagina principal */
+
+.infoClientes {
+    background-color: #f9fafb;
+    display: flex;
+    flex-direction: row;
+    gap: 200px;
+    padding: 80px 30px;
+    justify-content: center;
+}
+
+.paraApoderados, .paraConductores {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+    font-size: 20px;
+}
+
+#iconoUno, #iconoDos, #iconoTres {
+    background-color: #d4f8e0;
+    padding: 11px 10px 8px 11px;
+    border-radius: 50%;
+    color: #16A34A;
+}
+
+#iconoCuatro, #iconoCinco, #iconoSeis {
+    background-color: #DBEAFE;
+    color: #2563eb;
+    padding: 11px 10px 8px 11px;
+    border-radius: 50%;
+}
+
+
+/* estilos de la pagina de registro*/
+
+.regView{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: #2C2C2C;
+}
+
+.boxRegistro{
+    background-color: #f0f7ff;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.regView p{
+    padding: 20px;
+    font-size: 20px;
+    margin: 0 15%;
+    color: #787878;
+}
+
+.btnRegistro {
+    padding: 12px;
+    width: 130px;
+    border: none;
+    border-radius: 19px;
+    font-weight: 600;
+    font-size: medium;
+    color: #ffffff;
+}
+
+.opcionesRegistro{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 20px 0;
+}
+
+.opcionReg{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    padding: 30px;
+    width: 20%;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+    justify-content: center;
+}
+
+.opcionReg h2{
+    color: #2C2C2C;
+}
+
+.opcionReg p{
+    color: #3d3d3d;
+    font-size: 120%;
+}
+
+#iconApoderado, #iconConductor {
+    background-color: #DBEAFE;
+    padding: 11px 10px 8px 11px;
+    color: #2563eb;
+}
+
+.btnRegApoderado, .btnRegConductor{
+    width: auto;
+    border-radius: 5px;
+}
+
+.btnRegApoderado{
+    background-color: #2563eb;
+}
+
+.btnRegConductor{
+    background-color: #111827;
+}
+
+.btnRegApoderado:hover {
+    cursor: pointer;
+    background-color: #1e5adc;
+}
+
+.btnRegConductor:hover {
+    cursor: pointer;
+    background-color: #181e2c;
+}
+
+/* Estilos Quienes Somos */
+
+.nosotrosContainer{
+    background-color: #f0f7ff;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 80px 280px;
+    font-size: 20px;
+    gap: 20px;
+    align-items: center;
+}
+
+/* Estilos De Conoce A Nuestro Equipo*/
+
+.team {
+    background-color: #f0f7ff;
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    padding: 80px ;
+    font-size: 20px;
+    gap: 10px;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.info{
+    width: 40%;
+    height: 20%;
+}
+
+.team h1 {
+    font-size: 36px;
+    color: #111827;
+    margin-bottom: 20px;
+}
+
+.team p {
+    max-width: 600px;
+    color: #4B5563;
+    margin-bottom: 40px;
+}
+
+.teamImg {
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.teamMember {
+    display: flex;
+    align-items: center;
+    width: calc(50% - 20px);
+    margin-bottom: 40px;
+}
+
+.teamMember img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.memberInfo {
+    flex-grow: 1;
+}
+
+.teamMember h2 {
+    font-size: 18px;
+    color: #111827;
+    margin-bottom: 4px;
+}
+
+.teamMember .role {
+    color: #4F46E5;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .teamMember {
+        width: 100%;
+    }
+}
+
+/*  formulario de contacto */
+
+.contacto {
+    display: flex;
+    justify-content: center;
+    background-color: #F1F7FF;
+    padding: 60px;
+}
+
+.formularioContacto {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 35px;
+    width: 100%;
+    max-height: 660px;
+    max-width: 600px;
+}
+
+.formularioContacto h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2563EB;
+}
+
+.formularioContacto p {
+    text-align: center;
+    color: #666666;
+    margin-bottom: 46px;
+}
+
+input, textarea, select {
+    margin-top: 10px;
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 16px;
+}
+
+.info-contacto {
+    display: flex;
+    gap: 30px;
+}
+
+.info-contacto input {
+    width: 102%;
+}
+
+#pais {
+    width: 25%;
+}
+
+#telefono {
+    width: 74%;
+}
+
+.submitBtn {
+    margin-top: 25px;
+}
+
+.submitBtn button {
+    width: 100%;
+    padding: 12px;
+    background-color: #2563EB;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 20px;
+
+}
+
+.submitBtn button:hover {
+    background-color: #1e5adc;
+    cursor: pointer;
+}
+
+/* estilos de la pagina de pasos para registro*/
+
+.lineaPasos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    color: #2C2C2C;
+    max-width: 60%;
+}
+
+.paso {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    padding: 30px;
+    width: 45%;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    align-items: center;
+}
+.paso p{
+    font-size: 120%;
+}
+
+.numPaso {
+    background-color: #DBEAFE;
+    padding: 11px 10px 8px 11px;
+    border-radius: 50%;
+    font-weight: bold;
+    color: #2563eb;
+}
+
+.boxTitulo{
+    background-color: #f0f7ff;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #2C2C2C;
+}
+
+.boxPasos{
+    display: flex;
+    justify-content: center;
+}
