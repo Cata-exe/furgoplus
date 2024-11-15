@@ -5,6 +5,7 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>FurgoPlus</title>
+		<link rel="icon" href="./furgoplus.ico" type="image/x-icon">
 		<link rel="stylesheet" href="${pageContext.request.contextPath}/css/inicio_style.css">
 		<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css'>
 	</head>
