@@ -56,16 +56,16 @@
 	    <section class="requisitosConductores">
 	        <div class="paraConductores">
 	            <h1>Para Conductores</h1>
-	            <span><i class="fi fi-rs-shield" id="iconoUno"></i> Edad mínima de 21 años </span>
-	            <span><i class="fi fi-rs-shield" id="iconoDos"></i> Experiencia mínima de 2 años como conductor</span>
-	            <span><i class="fi fi-rs-shield" id="iconoTres"></i> Exámenes médicos vigentes</span>
+	            <span><i class="iconShield fi fi-rs-shield"></i> Edad mínima de 21 años </span>
+	            <span><i class="iconShield fi fi-rs-shield"></i> Experiencia mínima de 2 años como conductor</span>
+	            <span><i class="iconShield fi fi-rs-shield"></i> Exámenes médicos vigentes</span>
 	        </div>
 	        <div class="paraVehiculos">
 	            <h1>Para el Vehículo</h1>
-	            <span><i class="fi fi-rs-shield" id="iconoCuatro"></i> Antigüedad máxima de 12 años</span>
-	            <span><i class="fi fi-rs-shield" id="iconoCinco"></i> Revisión técnica especial vigente</span>
-	            <span><i class="fi fi-rs-shield" id="iconoSeis"></i> Cinturones de seguridad para todos los asientos</span>
-	            <span><i class="fi fi-rs-shield" id="iconoSiete"></i> Letrero "ESCOLARES" visible</span>
+	            <span><i class="iconShield fi fi-rs-shield"></i> Antigüedad máxima de 12 años</span>
+	            <span><i class="iconShield fi fi-rs-shield"></i> Revisión técnica especial vigente</span>
+	            <span><i class="iconShield fi fi-rs-shield"></i> Cinturones de seguridad para todos los asientos</span>
+	            <span><i class="iconShield fi fi-rs-shield"></i> Letrero "ESCOLARES" visible</span>
 	        </div>
 	    </section>
 	    <jsp:include page="/WEB-INF/navigation/footer.jsp" />

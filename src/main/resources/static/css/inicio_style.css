@@ -655,6 +655,6 @@ input, textarea, select {
     font-size: 20px;
 }
 
-#iconoUno, #iconoDos, #iconoTres, #iconoCuatro, #iconoCinco, #iconoSeis, #iconoSiete {
+.iconShield {
     color: #2563eb;
 }
