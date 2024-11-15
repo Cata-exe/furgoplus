@@ -29,7 +29,7 @@
 	                <input type="email" id="correo" required>
 	            </div>
 	            <div class="telefono">
-	                <label for="pais">Numero de Teléfono</label>
+	                <label for="pais">Numero de Celular</label>
 	                <div class="container-contactor">
 	                    <select id="pais" required>
 	                        <option value="+56">+56 (Chile)</option>
@@ -39,7 +39,7 @@
 	                        <option value="+58">+58 (Venezuela)</option>
 	                        <option value="+52">+52 (Mexico)</option>
 	                    </select>
-	                    <input type="tel" id="telefono" placeholder="tel" required>
+	                    <input type="tel" id="telefono" placeholder="Numero de Celular" required>
 	                </div>
 	            </div>
 	            <div class="container-contacto">

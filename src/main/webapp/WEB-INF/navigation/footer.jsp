@@ -22,7 +22,7 @@
 	            <div class="column">
 	                <h3>Para Apoderados</h3>
 	                <ul>
-	                    <a href="#">
+	                    <a href="/comofunciona">
 	                        <li>Como Funciona</li>
 	                    </a>
 	                    <a href="#">
@@ -36,14 +36,11 @@
 	            <div class="column">
 	                <h3>Para Conductor</h3>
 	                <ul>
-	                    <a href="#">
+	                    <a href="/requisitos">
 	                        <li>Requisitos</li>
 	                    </a>
 	                    <a href="/pasosregistro">
 	                        <li>Pasos Registro</li>
-	                    </a>
-	                    <a href="#">
-	                        <li>Beneficios</li>
 	                    </a>
 	                </ul>
 	            </div>
@@ -53,7 +50,7 @@
 	                    <a href="/contacto">
 	                        <li>Soporte</li>
 	                    </a>
-	                    <a href="#">
+	                    <a href="mailto:furgoplus@gmail.">
 	                        <li>Email: furgoplus@gmail.cl</li>
 	                    </a>
 	                    <a href="#">

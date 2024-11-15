@@ -20,7 +20,7 @@
 	        </div>
 	        <div class="team">
 	            <div class="info">
-	                <h1>Conoce a nuestro equipo</h1>
+	                <h2>Conoce a nuestro equipo</h2>
 	                <p>
 	                    El equipo que trabaja detrás de esta página está formado por personas dedicadas, 
 	                    creativas y con un firme compromiso por mejorar cada aspecto de nuestro servicio de transporte escolar. 
@@ -30,15 +30,15 @@
 	                <div class="teamMember">
 	                    <img src="/vista info chofer/viejito.jpg" alt="Camilo Durán">
 	                    <div class="memberInfo">
-	                        <h2>Camilo Durán</h2>
+	                        <h3>Camilo Durán</h3>
 	                        <p class="role">Lider / Back-End</p>
 	                    </div>
 	                </div>
 	                
 	                <div class="teamMember">
-	                    <img src="/vista info chofer/viejito.jpg" alt="Karla Jimenez">
+	                    <img src="/vista info chofer/viejito.jpg" alt="Karla Jim3nez">
 	                    <div class="memberInfo">
-	                        <h2>Karla Jimenez</h2>
+	                        <h3>Karla Jimenez</h3>
 	                        <p class="role">Co-Lider / Back-End / Base De Datos</p>
 	                    </div>
 	                </div>
@@ -46,7 +46,7 @@
 	                <div class="teamMember">
 	                    <img src="/vista info chofer/viejito.jpg" alt="Catalina Hernandez">
 	                    <div class="memberInfo">
-	                        <h2>Catalina Hernández</h2>
+	                        <h3>Catalina Hernández</h3>
 	                        <p class="role">Diseñadora / Front-End</p>
 	                    </div>
 	                </div>
@@ -54,7 +54,7 @@
 	                <div class="teamMember">
 	                    <img src="/vista info chofer/viejito.jpg" alt="Rachell Rosales">
 	                    <div class="memberInfo">
-	                        <h2>Camilo Durán</h2>
+	                        <h3>Rachell Rosales</h3>
 	                        <p class="role">Front-End Developer</p>
 	                    </div>
 	                </div>
@@ -62,7 +62,7 @@
 	                <div class="teamMember">
 	                    <img src="/vista info chofer/viejito.jpg" alt="Sebastian Cordova">
 	                    <div class="memberInfo">
-	                        <h2>Sebastián Cordova</h2>
+	                        <h3>Sebastián Cordova</h3>
 	                        <p class="role">Front-End Developer</p>
 	                    </div>
 	                </div>
@@ -70,7 +70,7 @@
 	                <div class="teamMember">
 	                    <img src="/vista info chofer/viejito.jpg" alt="Javier Arce">
 	                    <div class="memberInfo">
-	                        <h2>Javier Arce</h2>
+	                        <h3>Javier Arce</h3>
 	                        <p class="role">Back-End Developer</p>
 	                    </div>
 	                </div>

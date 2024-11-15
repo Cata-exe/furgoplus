@@ -16,29 +16,33 @@
 	</head>
 	<body>
 		 <jsp:include page="/WEB-INF/navigation/nav.jsp" />
-         <main>
-            <container class="regView">
-                <div class="boxRegistro">
-                    <h1>Elige tu perfil para registrarte</h1>
+         <main class="selectorRegUsuario">
+            <container class="containerSuperior">
+                <div class="regView">
+                    <div class="boxRegistro">
+                        <h1>Elige tu perfil para registrarte</h1>
+                    </div>
+                    <p>Puedes registrarte como apoderado para contratar servicios de transporte para tu hijo o como conductor para ofrecer tus servicios de transporte escolar en nuestra plataforma.</p>
                 </div>
-                <p>Puedes registrarte como apoderado para contratar servicios de transporte para tu hijo o como conductor para ofrecer tus servicios de transporte escolar en nuestra plataforma.</p>
             </container>
-            <container class="opcionesRegistro">
-                <div class="opcionReg">
-                    <div>
-                        <i class="fi fi-rr-user icon" id="iconApoderado"></i>
+            <container class="containerCentrado">
+                <div class="opcionesRegistro">
+                    <div class="opcionReg">
+                        <div>
+                            <i class="fi fi-rr-user icon" id="iconApoderado"></i>
+                        </div>
+                        <h2>Como Apoderado</h2>
+                        <p>Contrata un servicio de transporte seguro y confiable para tu hijo. Podrás ver la disponibilidad de furgones en tu zona, revisar las reseñas de otros apoderados, y comunicarte directamente con los conductores.</p>
+                        <button class="btnRegistro btnRegApoderado">Registrarme como Apoderado</button>
                     </div>
-                    <h2>Como Apoderado</h2>
-                    <p>Contrata un servicio de transporte seguro y confiable para tu hijo. Podrás ver la disponibilidad de furgones en tu zona, revisar las reseñas de otros apoderados, y comunicarte directamente con los conductores.</p>
-                    <button class="btnRegistro btnRegApoderado">Registrarme como Apoderado</button>
-                </div>
-                <div class="opcionReg">
-                    <div>
-                        <i class="fi fi-rs-driver-man icon" id="iconConductor"></i>
+                    <div class="opcionReg">
+                        <div>
+                            <i class="fi fi-rs-driver-man icon" id="iconConductor"></i>
+                        </div>
+                        <h2>Como Conductor</h2>
+                        <p>Ofrece un servicio de transporte escolar seguro y confiable. Podrás llegar a más familias en tu zona, recibir reseñas y comunicarte directamente con los apoderados interesados en tus servicios.</p>
+                        <button class="btnRegistro btnRegConductor">Registrarme como Conductor</button>
                     </div>
-                    <h2>Como Conductor</h2>
-                    <p>Ofrece un servicio de transporte escolar seguro y confiable. Podrás llegar a más familias en tu zona, recibir reseñas y comunicarte directamente con los apoderados interesados en tus servicios.</p>
-                    <button class="btnRegistro btnRegConductor">Registrarme como Conductor</button>
                 </div>
             </container>
         </main>

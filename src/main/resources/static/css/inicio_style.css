@@ -164,21 +164,32 @@ body {
 }
 
 
-/* estilos de la pagina de registro*/
+/* estilos de la pagina de seleccion de usuario*/
+
+.selectorRegUsuario{
+    display: grid;
+    width: 100%;
+}
+
+.containerSuperior{
+    justify-self: flex-start;
+    width: 100%;
+}
 
 .regView{
     display: flex;
     flex-direction: column;
     text-align: center;
     color: #2C2C2C;
+    background-color: #f0f7ff;
 }
 
 .boxRegistro{
-    background-color: #f0f7ff;
     padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #2563eb;
 }
 
 .regView p{
@@ -201,7 +212,7 @@ body {
 .opcionesRegistro{
     display: flex;
     justify-content: center;
-    gap: 25px;
+    gap: 100px;
     margin: 20px 0;
 }
 
@@ -219,11 +230,13 @@ body {
 
 .opcionReg h2{
     color: #2C2C2C;
+    font-size: 150%;
 }
 
 .opcionReg p{
     color: #3d3d3d;
     font-size: 120%;
+    text-align: left;
 }
 
 #iconApoderado, #iconConductor {
@@ -242,7 +255,9 @@ body {
 }
 
 .btnRegConductor{
-    background-color: #111827;
+    border: solid 2px #2563eb;
+    background-color: white;
+    color: #2563eb;
 }
 
 .btnRegApoderado:hover {
@@ -252,7 +267,7 @@ body {
 
 .btnRegConductor:hover {
     cursor: pointer;
-    background-color: #181e2c;
+    background-color: #f0f7ff;
 }
 
 /* Estilos Quienes Somos */
@@ -261,33 +276,45 @@ body {
     background-color: #f0f7ff;
     display: flex;
     flex-direction: column;
-    text-align: center;
     padding: 80px 280px;
     font-size: 20px;
     gap: 20px;
     align-items: center;
 }
 
+.nosotrosContainer h1{
+    color: #1e5adc;
+}
+
+.nosotrosContainer p{
+    color: #4B5563;
+    max-width: 1000px;
+}
+
 /* Estilos De Conoce A Nuestro Equipo*/
 
 .team {
-    background-color: #f0f7ff;
     display: flex;
     flex-direction: row;
     text-align: left;
     padding: 80px ;
     font-size: 20px;
     gap: 10px;
-    align-items: center;
     margin-top: 50px;
+    justify-content: center;
+    
 }
 
 .info{
-    width: 40%;
-    height: 20%;
+    width: 800px;
+    height: 200px;
 }
 
-.team h1 {
+.info p{
+	font-size: 18px;
+}
+
+.team h2 {
     font-size: 36px;
     color: #111827;
     margin-bottom: 20px;
@@ -300,7 +327,7 @@ body {
 }
 
 .teamImg {
-    width: 60%;
+    width: 700px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -325,7 +352,7 @@ body {
     flex-grow: 1;
 }
 
-.teamMember h2 {
+.teamMember h3 {
     font-size: 18px;
     color: #111827;
     margin-bottom: 4px;
@@ -467,4 +494,167 @@ input, textarea, select {
 .boxPasos{
     display: flex;
     justify-content: center;
+}
+
+/* estilos de la pagina de como funciona*/
+
+.lineaPasos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    color: #2C2C2C;
+    max-width: 60%;
+}
+
+.paso {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    padding: 30px;
+    width: 45%;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    align-items: center;
+}
+.paso p{
+    font-size: 120%;
+}
+
+.numPaso {
+    background-color: #DBEAFE;
+    padding: 11px 10px 8px 11px;
+    border-radius: 50%;
+    font-weight: bold;
+    color: #2563eb;
+}
+
+.boxTitulo{
+    background-color: #f0f7ff;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #2C2C2C;
+}
+
+.boxTitulo h1{
+	color: #2563eb;
+}
+
+.boxPasos{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/* estilos para requisitos de conductor */
+
+.requisitos {
+    background-color: #f0f7ff;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 80px 280px;
+    font-size: 30px;
+    gap: 20px;
+    align-items: center;
+}
+
+.requisitos h1{
+    max-width: 1000px;
+}
+
+.requisitos p {
+    font-size: 20px;
+    padding: 0px 50px;
+    color: #787878;
+}
+
+.requisitos span {
+    color: #2563eb;
+}
+
+
+.infoRequisitos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 70px;
+    text-align: center;
+    align-items: center;
+}
+
+.infoRequisitos h1 {
+    margin-bottom: 60px;
+}
+
+.requisitoBox{
+    display: flex;
+    gap: 35px;
+    width: 1400px;
+}
+
+
+.containerRequisito {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 10px;
+    padding: 25px;
+    display: flex;
+    width: calc(100%/4);
+    flex-direction: column;
+    gap: 20px;
+    align-items: baseline;
+    text-align: left;
+    font-size: 25px;
+    margin-bottom: 80px;
+    color: #2563eb;
+}
+
+.containerRequisito:hover {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 6px 15px;
+}
+
+.containerRequisito p {
+    font-size: 20px;
+    color: #787878;
+}
+
+.containerRequisito h2 {
+    font-size: 22px;
+    color: black;
+}
+
+.icon {
+    background-color: #f0f7ff;
+    padding: 20px 22px;
+    border-radius: 50%;
+}
+
+/* requisitos para conductores y para el vehiculo*/
+
+
+.requisitosConductores {
+    background-color: #f9fafb;
+    display: flex;
+    flex-direction: row;
+    gap: 200px;
+    padding: 80px 30px;
+    justify-content: center;
+}
+
+.paraConductores, .paraVehiculos {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+    font-size: 20px;
+}
+
+#iconoUno, #iconoDos, #iconoTres, #iconoCuatro, #iconoCinco, #iconoSeis, #iconoSiete {
+    color: #2563eb;
 }

@@ -4,7 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class ControladorUsuarios {
+public class ControladorRutasVarias {
 	@GetMapping("/")
     public String inicio() {
 		return "inicio.jsp";
@@ -45,5 +45,14 @@ public class ControladorUsuarios {
 		return "pasosRegistro.jsp";
     }
 	
+	@GetMapping("/comofunciona")
+    public String comoFunciona() {
+		return "comoFunciona.jsp";
+    }
+	
+	@GetMapping("/requisitos")
+    public String requisitosConductor() {
+		return "requisitos.jsp";
+    }
 	
 }
