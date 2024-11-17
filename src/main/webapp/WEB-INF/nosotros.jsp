@@ -32,12 +32,12 @@
 	                    <img src="/vista info chofer/viejito.jpg" alt="Camilo Durán">
 	                    <div class="memberInfo">
 	                        <h3>Camilo Durán</h3>
-	                        <p class="role">Lider / Back-End</p>
+	                        <p class="role">Lider / Back-End Developer</p>
 	                    </div>
 	                </div>
 	                
 	                <div class="teamMember">
-	                    <img src="/vista info chofer/viejito.jpg" alt="Karla Jim3nez">
+	                    <img src="./img/karlajimenez.jpg" alt="Karla Jim3nez">
 	                    <div class="memberInfo">
 	                        <h3>Karla Jimenez</h3>
 	                        <p class="role">Co-Lider / Back-End / Base De Datos</p>
@@ -45,15 +45,15 @@
 	                </div>
 	                
 	                <div class="teamMember">
-	                    <img src="/vista info chofer/viejito.jpg" alt="Catalina Hernandez">
+	                    <img src="./img/catalinahernandez.jpg" alt="Catalina Hernandez">
 	                    <div class="memberInfo">
 	                        <h3>Catalina Hernández</h3>
-	                        <p class="role">Diseñadora / Front-End</p>
+	                        <p class="role">Diseñadora / Front-End Developer</p>
 	                    </div>
 	                </div>
 	                
 	                <div class="teamMember">
-	                    <img src="/vista info chofer/viejito.jpg" alt="Rachell Rosales">
+	                    <img src="./img/rachell.jpg" alt="Rachell Rosales">
 	                    <div class="memberInfo">
 	                        <h3>Rachell Rosales</h3>
 	                        <p class="role">Front-End Developer</p>
