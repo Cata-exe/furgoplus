@@ -17,7 +17,7 @@
 	<body>
 		<jsp:include page="/WEB-INF/navigation/nav.jsp" />
 	    <main class="mainView">
-	        <h1>Conectando Familias con <span id="tes">Transporte Escolar Seguro</span></h1>
+	    	<h1>Conectando Familias con <span id="tes">Transporte Escolar Seguro</span></h1>
 	        <p>La plataforma que une a apoderados con conductores confiables para el transporte escolar de sus hijos. </p>
 	        <div class="infoBtn">
 	        	<form action="/soyapoderado" method="get">

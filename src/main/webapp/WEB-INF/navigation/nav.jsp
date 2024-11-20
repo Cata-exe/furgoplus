@@ -9,10 +9,13 @@
 	</head>
 	<body>
 		<nav class="navbar">
-	        <div class="logo">
-	            <h1>Furgo<span id="plus">Plus</span></h1>
-	            <p>Transporte Escolar</p>
-	        </div>
+			<a href="/">
+				<div class="logo">
+		            <h1>Furgo<span id="plus">Plus</span></h1>
+		            <p>Transporte Escolar</p>
+		        </div>
+			</a>
+	        
 	        <ul class="nav-links">
 	            <li><a href="/">Inicio</a></li>
 	            <li><a href="#">Conductores</a></li>
