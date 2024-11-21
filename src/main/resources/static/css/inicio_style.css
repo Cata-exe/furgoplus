@@ -383,9 +383,8 @@ body {
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 35px;
-    width: 100%;
-    max-height: 660px;
-    max-width: 600px;
+    width: 800px;
+    
 }
 
 .formularioContacto h1 {
@@ -406,7 +405,7 @@ input, textarea, select {
     padding: 8px;
     border: 1px solid #ddd;
     border-radius: 4px;
-    margin-bottom: 16px;
+    
 }
 
 .info-contacto {
@@ -432,7 +431,7 @@ input, textarea, select {
 
 .submitBtn button {
     width: 100%;
-    padding: 12px;
+    padding: 10px;
     background-color: #2563EB;
     color: white;
     border: none;

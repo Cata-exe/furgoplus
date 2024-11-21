@@ -29,7 +29,7 @@
 	            </div>
 	            <div class="teamImg">
 	                <div class="teamMember">
-	                    <img src="/vista info chofer/viejito.jpg" alt="Camilo Durán">
+	                    <img src="./img/camiloduran.jpg" alt="Camilo Durán">
 	                    <div class="memberInfo">
 	                        <h3>Camilo Durán</h3>
 	                        <p class="role">Lider / Back-End Developer</p>

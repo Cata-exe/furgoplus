@@ -1,0 +1,13 @@
+package com.furgoplus.repositorios;
+
+import java.util.List;
+
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+
+import com.furgoplus.modelos.Contacto;
+
+@Repository
+public interface RepositorioContactos extends CrudRepository<Contacto, Long>{
+	List<Contacto> findAll();
+}

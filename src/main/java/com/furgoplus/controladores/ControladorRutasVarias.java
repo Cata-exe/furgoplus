@@ -35,11 +35,6 @@ public class ControladorRutasVarias {
 		return "nosotros.jsp";
     }
 	
-	@GetMapping("/contacto")
-    public String contacto() {
-		return "contacto.jsp";
-    }
-	
 	@GetMapping("/pasosregistro")
     public String pasosRegistro() {
 		return "pasosRegistro.jsp";
