@@ -24,7 +24,9 @@
 	        </ul>
 	        <div class="navBtns">
 	        	
-	            <button id="loginBtn">Iniciar Sesión</button>
+	        	<form action="/login" method="get">
+	            	<button id="loginBtn">Iniciar Sesión</button>
+	            </form>
 	            <form action="/opcionregistro" method="get">
 	            	<button id="registroBtn">Registrarse</button>
 	            </form>

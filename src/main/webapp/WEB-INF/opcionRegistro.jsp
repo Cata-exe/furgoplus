@@ -34,7 +34,11 @@
                         </div>
                         <h2>Como Apoderado</h2>
                         <p>Contrata un servicio de transporte seguro y confiable para tu hijo. Podrás ver la disponibilidad de furgones en tu zona, revisar las reseñas de otros apoderados, y comunicarte directamente con los conductores.</p>
-                        <button class="btnRegistro btnRegApoderado">Registrarme como Apoderado</button>
+                        <form action="/registroapoderado" method="get">
+			            	<button class="btnRegistro btnRegApoderado">Registrarme como Apoderado</button>
+			            </form>
+                        
+                        
                     </div>
                     <div class="opcionReg">
                         <div>
@@ -42,7 +46,10 @@
                         </div>
                         <h2>Como Conductor</h2>
                         <p>Ofrece un servicio de transporte escolar seguro y confiable. Podrás llegar a más familias en tu zona, recibir reseñas y comunicarte directamente con los apoderados interesados en tus servicios.</p>
-                        <button class="btnRegistro btnRegConductor">Registrarme como Conductor</button>
+                        <form action="/registrochofer" method="get">
+			            	<button class="btnRegistro btnRegConductor">Registrarme como Conductor</button>
+			            </form>
+                        
                     </div>
                 </div>
             </container>
