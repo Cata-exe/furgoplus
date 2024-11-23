@@ -8,6 +8,7 @@
 	    <title>FurgoPlus</title>
 	    <link rel="icon" href="./furgoplus.ico" type="image/x-icon">
 	    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/inicio_style.css">
+	     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css'>
 	</head>
 	<body>
 		<jsp:include page="/WEB-INF/navigation/nav.jsp" />
@@ -61,20 +62,13 @@
 	                </div>
 	                
 	                <div class="teamMember">
-	                    <img src="/vista info chofer/viejito.jpg" alt="Sebastian Cordova">
+	                    <img src="./img/sebastianCordova.jpg" alt="Sebastian Cordova">
 	                    <div class="memberInfo">
 	                        <h3>Sebastián Cordova</h3>
 	                        <p class="role">Front-End Developer</p>
 	                    </div>
 	                </div>
 	                
-	                <div class="teamMember">
-	                    <img src="/vista info chofer/viejito.jpg" alt="Javier Arce">
-	                    <div class="memberInfo">
-	                        <h3>Javier Arce</h3>
-	                        <p class="role">Back-End Developer</p>
-	                    </div>
-	                </div>
 	            </div>
 	        </div>
 	    </main>

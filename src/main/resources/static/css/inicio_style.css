@@ -350,6 +350,8 @@ body {
 
 .memberInfo {
     flex-grow: 1;
+    position: relative;
+    top: 15px;
 }
 
 .teamMember h3 {
