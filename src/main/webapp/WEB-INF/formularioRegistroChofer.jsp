@@ -10,16 +10,16 @@
     <title>FurgoPlus - Registro Chofer</title>
     <link rel="icon" href="./furgoplus.ico" type="image/x-icon">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/registro_style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css'>
 </head>
 <body>
     <jsp:include page="/WEB-INF/navigation/nav.jsp" />
     
-    <div class="container mt-3">
+    <div class="formularioRegistro">
         <div class="row">
             <h1>Registro de Chofer</h1>
         </div>
-        <div class="row container">
+        <div class="inputsRegistro">
             <form:form class="col-6" action="/procesa/registro/chofer" method="POST" modelAttribute="registroChoferDTO">
                 <div>
                     <form:label class="form-label" path="usuario.nombre">Nombre:</form:label>
@@ -63,7 +63,7 @@
                     <form:errors class="alert alert-danger d-block" path="documentoChofer.licenciaConducir"/>
                 </div>
 
-                <button class="btn btn-primary mt-3">Registrarse</button>
+                <button class="btnRegistrarse">Registrarse</button>
                 <p class="noacc">¿Ya eres chofer? <a href="">Inicia Sesión</a></p>
             </form:form>
         </div>
