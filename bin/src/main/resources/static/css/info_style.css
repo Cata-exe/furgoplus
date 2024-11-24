@@ -1,0 +1,107 @@
+@charset "UTF-8";
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+body { 
+    background-color: white;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+
+/* seccion principal de vista de apoderados*/
+
+main {
+    background-color: #f0f7ff;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    gap: 30px;
+}
+
+main h1 {
+    margin-bottom: 10px;
+    font-size: 40px;
+    color: #2563eb;
+    text-align: center;
+}
+
+main p {
+    text-align: left;
+    color: #4B5563;
+    font-size: 20px;
+    max-width: 1000px;
+}
+
+section {
+    margin-top: 30px;
+}
+
+section h1 {
+    font-size: 30px;
+    text-align: center;
+    padding: 20px;
+}
+
+.review {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+
+.containerReview {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 12px;
+    background-color: white;
+    color: #4B5563;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 350px;
+    padding: 35px;
+    margin: 20px;
+    font-size: 20px;
+}
+
+.containerReview:hover {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 6px 15px;
+}
+
+.registroApoderado {
+    display: flex;
+    justify-content: center;
+}
+
+.registroApoderado button {
+    padding: 20px 30px;
+    border: solid 2px #2563eb;
+    color: #2563eb;
+    background-color: white;
+    border-radius: 30px;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 10px;
+}
+
+.registroApoderado button:hover {
+    background-color: #f0f7ff;
+    cursor: pointer;
+}
+
+.apoderadosReview {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    border: solid 2px #2563eb;
+}
+
+
+
+

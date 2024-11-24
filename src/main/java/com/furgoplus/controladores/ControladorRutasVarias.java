@@ -50,4 +50,9 @@ public class ControladorRutasVarias {
 		return "requisitos.jsp";
     }
 	
+	@GetMapping("/pagos")
+    public String pagos() {
+		return "pago.jsp";
+    }
+	
 }
