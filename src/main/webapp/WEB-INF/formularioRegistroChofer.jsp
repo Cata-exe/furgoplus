@@ -15,7 +15,7 @@
 <body>
     <jsp:include page="/WEB-INF/navigation/nav.jsp" />
     
-    <div class="formularioRegistro">
+    <div class="formularioRegistro" id="formularioChofer">
         <div class="row">
             <h1>Registro de Chofer</h1>
         </div>
@@ -64,7 +64,7 @@
                 </div>
 
                 <button class="btnRegistrarse">Registrarse</button>
-                <p class="noacc">¿Ya eres chofer? <a href="">Inicia Sesión</a></p>
+                <p class="noacc">¿Ya eres chofer? <a href="/login">Inicia Sesión</a></p>
             </form:form>
         </div>
     </div>

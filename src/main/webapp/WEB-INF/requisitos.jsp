@@ -18,7 +18,7 @@
 		<main class="requisitos">
 	        <h1>Requisitos para nuestros <span>conductores</span></h1>
 	        <p>Conoce los requisitos y la documentación necesaria para ser conductor de furgones escolares en FurgoPlus</p>
-	        <p>Requisitos en chile</p>
+	        <p>Requisitos en chile basados en las leyes mas actuales</p>
 	    </main>
 	    <div class="infoRequisitos">
 	        <h1>Requisitos Fundamentales</h1>

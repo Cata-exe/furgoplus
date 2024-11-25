@@ -13,17 +13,18 @@
 		<div class="faq-container">
 	        <div class="faq-title">Preguntas Frecuentes</div>
 	        <div class="faq-item">
-	            <div class="faq-question">¿Lorem? <span>+</span></div>
+	            <div class="faq-question">¿Cuáles son las principales normas que rigen al transporte escolar? <span>+</span></div>
 	            <div class="faq-answer">
-	            	Lorem ipsum dolor sit amet consectetur
-	                adipisicing elit. Quas cupiditate laboriosam fugiat.
+	            	- Decreto con Fuerza de Ley N° 1, de 2007, de los Ministerios de Transportes y Telecomunicaciones y de Justicia, que fija el texto refundido, coordinado y sistematizado de la Ley N.º 18.290, de Tránsito.<br>
+					- Ley N° 19.831, de 2002, que Crea el Registro Nacional de Servicios de Transporte Remunerado de Escolares.<br>
+					- Decreto Supremo N° 38, de 1992, del Ministerio de Transportes y Telecomunicaciones, que Reglamenta el Transporte Remunerado de Escolares.<br>
+					- Decreto Supremo N° 38, de 2003, del Ministerio de Transportes y Telecomunicaciones, que Crea y Reglamenta el Registro Nacional de Transporte Remunerado de Escolares.<br>
 	            </div>
 	        </div>
 	        <div class="faq-item">
-	            <div class="faq-question">¿Lorem? <span>+</span></div>
+	            <div class="faq-question">¿Quiénes fiscalizan los servicios de transporte escolar? <span>+</span></div>
 	            <div class="faq-answer">
-	            	Lorem ipsum dolor sit amet consectetur
-	                adipisicing elit. Quas cupiditate laboriosam fugiat.
+	            	Carabineros de Chile, inspectores municipales e inspectores fiscales dependientes del Departamento de Fiscalización del Ministerio de Transportes y Telecomunicaciones.
 	            </div>
 	        </div>
 	    </div>

@@ -16,7 +16,7 @@
 <body>
     <jsp:include page="/WEB-INF/navigation/nav.jsp"/>
     
-    <div class="formularioRegistro">
+    <div class="formularioRegistro" id="formularioApoderado">
         <div class="row">
             <h1> Registro </h1>
         </div>
@@ -45,7 +45,7 @@
                 <button class="btnRegistrarse">
                     Registrarse
                 </button>
-                <p class="noacc">¿Ya eres apoderado? <a href="">Inicia Sesión</a></p>
+                <p class="noacc">¿Ya eres apoderado? <a href="/login">Inicia Sesión</a></p>
             </form:form>
         </div>
     </div>

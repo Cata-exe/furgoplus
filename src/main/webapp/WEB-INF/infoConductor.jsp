@@ -15,8 +15,10 @@
 	        <h1>Conductores</h1>
 	        <p>FurgoPlus te permite expandir tu negocio de furgones escolares de manera fácil y eficiente. Regístrate y gestiona tus viajes, rutas y horarios desde un solo panel, conectando rápidamente con apoderados que necesitan un servicio seguro y confiable. ¡Únete hoy a FurgoPlus y optimiza tu tiempo, aumenta tus ingresos y garantiza la seguridad de los niños en cada viaje!</p>
 	        <div class="registroApoderado">
-	            <button>Registro Conductor</button>
-	        </div>
+	        	<form action="/registrochofer">
+	        		<button>Registro Conductor</button>
+	        	</form>
+    	    </div>
 	    </main>
 	    <section>
 	        <h1>Testimonios de nuestros conductores</h1>

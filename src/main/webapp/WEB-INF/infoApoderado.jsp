@@ -15,7 +15,9 @@
 	        <h1>Apoderados</h1>
 	        <p>En FurgoPlus entendemos lo crucial que es para ti la seguridad de tu hijo durante el transporte escolar. Por eso, ofrecemos un servicio confiable con seguimiento en tiempo real, garantizando su traslado en condiciones óptimas. Al registrarte, tendrás acceso inmediato a toda la información y el control que necesitas para estar tranquilo. ¡Elige FurgoPlus y brinda lo mejor en seguridad y comodidad para tu hijo!</p>
 	        <div class="registroApoderado">
-	            <button>Registro Apoderado</button>
+		        <form action="/registroapoderado">
+		        	<button>Registro Apoderado</button>
+		        </form>  
 	        </div>
 	    </main>
 	    <section>

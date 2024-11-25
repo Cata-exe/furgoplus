@@ -35,7 +35,7 @@
 		                <button class="btnInicioSesion">
 							Iniciar Sesión
 						</button>
-		                <h3 class="noacc">¿No eres miembro? <a href="">Registrate</a></h3>
+		                <h3 class="noacc">¿No eres miembro? <a href="/opcionregistro">Registrate</a></h3>
 		            </div>
 		        </div>
 	        </form:form>
