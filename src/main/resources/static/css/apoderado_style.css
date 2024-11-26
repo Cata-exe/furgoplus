@@ -20,9 +20,13 @@ body {
     padding: 20px;
 }
 
-h1 {
+.container h1 {
     text-align: center;
-    margin-bottom: 20px;
+    margin: 20px;
+}
+
+.container span {
+	color: #2563EB;
 }
 
 .row {
@@ -30,6 +34,7 @@ h1 {
     flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 20px;
+    align-items: center;
 }
 
 .col-3 {
@@ -38,6 +43,7 @@ h1 {
 }
 
 .tarjeta-usuario {
+	background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -45,6 +51,10 @@ h1 {
     padding: 15px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-radius: 10px;
+}
+
+.tarjeta-usuario h3 {
+	color: #2563EB;
 }
 
 .tarjeta-usuario:hover{
@@ -74,7 +84,7 @@ button:hover {
 #searchBar { 
 	width: 80%; 
 	padding: 10px; 
-	margin-bottom: 20px; 
+	margin: 20px; 
 	border: 1px solid #ccc; 
 	border-radius: 5px;
 }

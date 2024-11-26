@@ -14,7 +14,7 @@
 		
 		
 		<div class="container">
-			<h1>Bienvenido de vuelta apoderado ${nombre}</h1>
+			<h1>Bienvenido de vuelta apoderado <span>${nombre}</span></h1>
 			<div class="row">
 				<h1> Choferes </h1>
 			</div>
