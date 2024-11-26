@@ -62,6 +62,8 @@ public class Usuario {
 	@NotBlank(message = "Por favor proporciona la confirmación de su contraseña.")
 	private String confirmacionContrasenia;
 	
+	private String imagen;
+	
 	@Enumerated(EnumType.STRING) 
 	private Rol rol;
 	
@@ -113,6 +115,14 @@ public class Usuario {
 
 	public void setConfirmacionContrasenia(String confirmacionContrasenia) {
 		this.confirmacionContrasenia = confirmacionContrasenia;
+	}
+
+	public String getImagen() {
+		return imagen;
+	}
+
+	public void setImagen(String imagen) {
+		this.imagen = imagen;
 	}
 
 	public Rol getRol() {

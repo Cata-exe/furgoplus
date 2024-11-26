@@ -1,5 +1,7 @@
 package com.furgoplus.servicios;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,6 +15,10 @@ public class ServicioApoderados {
 
 	public ServicioApoderados(RepositorioApoderados repositorioApoderados) {
 		this.repositorioApoderados = repositorioApoderados;
+	}
+	
+	public List<Apoderado> obtenerTodas(){
+		return this.repositorioApoderados.findAll();
 	}
 	
 	public Apoderado obtenerUno(Long id_apoderado) {

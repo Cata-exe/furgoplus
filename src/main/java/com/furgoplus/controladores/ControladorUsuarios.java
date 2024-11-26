@@ -1,5 +1,7 @@
 package com.furgoplus.controladores;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -37,12 +39,14 @@ public class ControladorUsuarios {
     }
     
     @GetMapping("/vista")
-    public String vistaUsuarios(HttpSession session) {
+    public String vistaUsuarios(Model model, HttpSession session) {
     	Usuario usuario = (Usuario) session.getAttribute("usuario");
     	System.out.println(usuario);
 
         if (usuario != null && usuario.getRol() != null) {
             if (usuario.getRol() == Rol.apoderado) {
+            	List<Usuario> usuarios = this.servicioUsuarios.obtenerUsuarioChofer(Rol.chofer);
+            	model.addAttribute("usuarios", usuarios);
                 return "vistaApoderado.jsp";
             } else if (usuario.getRol() == Rol.chofer) {
                 return "vistaChofer.jsp";

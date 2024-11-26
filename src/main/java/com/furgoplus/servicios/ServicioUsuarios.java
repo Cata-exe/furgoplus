@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.validation.BindingResult;
 
+import com.furgoplus.modelos.Rol;
 import com.furgoplus.modelos.Usuario;
 import com.furgoplus.modelos.UsuarioLogin;
 import com.furgoplus.repositorios.RepositorioUsuarios;
@@ -24,6 +25,10 @@ public class ServicioUsuarios {
 	
 	public List<Usuario> obtenerTodos(){
 		return this.repositorioUsuarios.findAll();
+	}
+	
+	public List<Usuario> obtenerUsuarioChofer(Rol rol) {
+		return this.repositorioUsuarios.findByRol(rol);
 	}
 	
 	public Usuario obtenerUsuarioId(Long idUsuario) {
