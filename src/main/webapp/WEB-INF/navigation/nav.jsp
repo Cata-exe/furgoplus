@@ -39,7 +39,7 @@
 				    if (isUserLoggedIn) {
 				%>
 						<form action="/logout" method="get">
-			            	<button id="registroBtn">Cerrar sesión</button>
+			            	<button id="logoutBtn">Cerrar sesión</button>
 			            </form>
 				<%
 				    } else {

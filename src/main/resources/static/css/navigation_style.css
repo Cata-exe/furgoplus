@@ -2,6 +2,7 @@
 
 /* estilos de la barra de navegacion y sus elementos*/
 
+
 .navbar {
     background-color: white;
     color: #2C2C2C;
@@ -16,6 +17,7 @@
 
 .navbar a{
 	text-decoration: none;
+	color: inherit;
 }
 
 #plus {
