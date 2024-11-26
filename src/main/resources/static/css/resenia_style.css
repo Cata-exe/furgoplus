@@ -1,0 +1,143 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+   	padding: 0;
+   	font-family: Arial, sans-serif;
+   	box-sizing: border-box;
+}
+
+body {
+    background-color: #f5f7ff;
+    display: grid;
+   	grid-template-rows: auto 1fr auto;
+   	min-height: 100vh;
+}
+
+/* estilos de la página principal del login */
+
+.containerMain {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 0 80px;
+    gap: 20px;
+    align-items: center;
+    background-color: #f0f7ff;
+}
+
+.containerMain h1 {
+    color: #2563eb;
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.containerCalificar {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    width: auto;
+    height: 450px;
+    padding: 35px;
+    border: none;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.containerCalificar label {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #4b5563;
+}
+
+.divContainer {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 5px;
+}
+
+.divContainer input[type=text]{
+    width: 600px;
+}
+
+#txtNombre {
+    padding: 5px;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    width: 98%;
+}
+
+#txtReseña {
+    padding: 5px;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    resize: none;
+}
+
+#divEnviar {
+    margin-top: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#btnEnviar {
+    padding: 15px;
+    border: none;
+    width: 180px;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    background-color: #2563eb;
+}
+
+#btnEnviar:hover {
+    background-color: #1e5adc;
+    cursor: pointer;
+}
+
+#btnEnviar:active {
+    scale: 0.95;
+}
+
+.rate {
+    float: left;
+    height: 46px;
+    padding: 0 10px;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #2563eb;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #2563eb;     
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #2563eb;    
+}

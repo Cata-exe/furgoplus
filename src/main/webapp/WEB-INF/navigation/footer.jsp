@@ -6,6 +6,7 @@
 		<meta charset="UTF-8">
 		<title>Footer</title>
 		<link rel="stylesheet" href="${pageContext.request.contextPath}/css/navigation_style.css">
+		<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css'>
 	</head>
 	<body>
 		<footer class="footer">
