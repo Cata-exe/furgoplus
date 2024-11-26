@@ -9,6 +9,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.furgoplus.modelos.Apoderado;
 import com.furgoplus.modelos.DocumentoChofer;
@@ -116,6 +117,12 @@ public class ControladorUsuarios {
 		return "formularioLogin.jsp";
     }
     
+    @GetMapping("/logout")
+	public String formularioLogout(HttpSession sesion) {
+		sesion.invalidate();
+		return "redirect:/";
+	}
+    
     @PostMapping("/procesa/login")
     public String loginUsuario(@Valid @ModelAttribute UsuarioLogin usuarioLogin, BindingResult validation, HttpSession session, Model model) {
         validation = this.servicioUsuarios.validarLogin(validation, usuarioLogin);
@@ -129,5 +136,17 @@ public class ControladorUsuarios {
         return "redirect:/vista";
     }
 	
-	
+    @GetMapping("/detalleChofer")
+    public String detalleChofer(@RequestParam("id") Long choferId, Model model, HttpSession session) {
+        // Verificar si el usuario está autenticado
+        Long userId = (Long) session.getAttribute("id");
+        if (userId == null) {
+            return "redirect:/login";
+        }
+
+        // Obtener los detalles del chofer
+        Usuario chofer = servicioUsuarios.obtenerUsuarioId(choferId);
+        return "detalleChofer.jsp";
+    }
 }
+    

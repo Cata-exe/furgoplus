@@ -10,7 +10,9 @@
 	    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/apoderado_style.css">	
 	</head>
 	<body>
-		<jsp:include page="/WEB-INF/navigation/nav.jsp" />
+		<jsp:include page="/WEB-INF/navigation/nav.jsp">
+			<jsp:param name="isUserLoggedIn" value="true" />
+		</jsp:include>
 		
 		
 		<div class="container">
@@ -28,7 +30,8 @@
 					<h3> ${usuario.nombre} </h3>
 					<img class="imagen" src="${usuario.imagen}" alt="Imagen ${usuario.nombre}"/>
 
-					<form action="#" method="GET">
+					<form action="${pageContext.request.contextPath}/detalleChofer" method="GET">
+						<input type="hidden" name="id" value="${usuario.id}" />
 						<button class="btn btn-success">
 							Detalle
 						</button>

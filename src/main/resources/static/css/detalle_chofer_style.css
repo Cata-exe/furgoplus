@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body { 
+    background-color: white;
+}
+
+/* estilos de la barra de navegacion y sus elementos*/
+
+.navbar {
+    background-color: white;
+    color: #2C2C2C;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+}
+
+#plus {
+    color: #2563eb;
+}
+
+.logo p {
+    font-size: small;
+    letter-spacing: 1px;
+}
+
+.logo h1 {
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    gap: 60px;
+
+}
+
+.nav-links li a {
+    color: #787878;
+    font-size: 18px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    cursor: pointer;
+    color: #2563eb;
+}
+
+.navBtns{
+    display: flex;
+    gap: 30px;
+}
+
+#loginBtn:hover, 
+#registroBtn:hover{
+    cursor: pointer;
+}
+
+#loginBtn {
+    background: none;
+    border: none;
+    color: #2C2C2C;
+    font-size: medium;
+}
+
+#loginBtn:hover {
+    color: #2563eb;
+}
+
+#registroBtn:hover {
+    background-color: #1e5adc;
+}
+
+#registroBtn {
+    padding: 12px;
+    width: 130px;
+    border: none;
+    border-radius: 19px;
+    font-weight: 600;
+    font-size: medium;
+    color: #ffffff;
+    background-color: #2563eb;
+}
+
+/* estilos del main container e información chofer y furgon*/
+
+.mainDiv {
+    min-height: 100vh;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Estilo para el buscador */
+  #search {
+    width: 100%;
+    max-width: 800px;
+    padding: 12px 16px;
+    border: none;
+    border-radius: 999px;
+    background-color: #e2e8f0;
+    margin-bottom: 32px;
+  }
+  
+  /* Contenedores de información */
+
+  .containerChofer, .containerFurgon {
+    background-color: #f0f7ff;
+    border-radius: 8px;
+    padding: 32px;
+    color: white;
+    flex: 1;
+    margin-bottom: 50px;
+    width: 1400px;
+    
+  }
+  
+  .mainDiv h1 {
+    color: #2c3e50;
+    margin-bottom: 16px;
+  }
+  
+  /* Contenedor flex para info del chofer e imagen */
+  .choferFlexContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+  
+  @media (min-width: 768px) {
+    .choferFlexContainer {
+      flex-direction: row;
+    }
+  }
+  
+  .containerInfo {
+    flex: 2;
+  }
+  
+  .containerImg {
+    flex: 1;
+  }
+  
+  .containerInfo h2 {
+    color: #94a3b8;
+    font-size: 16px;
+    margin-bottom: 4px;
+  }
+  
+  .containerInfo p {
+    color: #94a3b8;
+    margin-bottom: 16px;
+  }
+  
+  /* Botones de acción */
+  .btnInfo {
+    display: flex;
+    gap: 16px;
+    margin-top: 16px;
+  }
+  
+  .btnInfo input[type="button"] {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  
+  .btnInfo input[type="button"]:first-child {
+    background-color: #64748b;
+    color: white;
+  }
+  
+  .btnInfo input[type="button"]:last-child {
+    background-color: #3b82f6;
+    color: white;
+  }
+  
+  /* Contenedor de imágenes */
+  .containerImg img, .imgFurgon img {
+    border-radius: 8px;
+    width: 450px;  /* Ancho fijo */
+    height: 300px; /* Alto fijo */
+    object-fit: cover; /* Mantiene la relación de aspecto y cubre el contenedor */
+    border-radius: 8px;
+  }
+  
+  .imgFurgon {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 16px;
+  }
+  
+  /* Información del vehículo */
+  .containerInfoFurgon {
+    margin-top: 32px;
+  }
+  
+  .containerInfoFurgon h2 {
+    color: #94a3b8;
+    font-size: 16px;
+    margin-bottom: 4px;
+  }
+  
+  .containerInfoFurgon p {
+    color: #94a3b8;
+    margin-bottom: 16px;
+  }
+
+  
+

@@ -1,0 +1,393 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+body { 
+    background-color: white;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+/* estilos de la barra de navegacion y sus elementos*/
+
+.navbar {
+    background-color: white;
+    color: #2C2C2C;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    position: sticky;
+    width: 96%;
+    top: 0;
+}
+
+#plus {
+    color: #2563eb;
+}
+
+.logo p {
+    font-size: small;
+    letter-spacing: 1px;
+}
+
+.logo h1 {
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    gap: 60px;
+}
+
+.nav-links li a {
+    color: #787878;
+    font-size: 18px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    cursor: pointer;
+    color: #2563eb;
+}
+
+.navBtns{
+    display: flex;
+    gap: 30px;
+}
+
+#loginBtn:hover, 
+#registroBtn:hover{
+    cursor: pointer;
+}
+
+#loginBtn {
+    background: none;
+    border: none;
+    color: #2C2C2C;
+    font-size: medium;
+}
+
+#loginBtn:hover {
+    color: #2563eb;
+}
+
+#registroBtn:hover {
+    background-color: #1e5adc;
+}
+
+#registroBtn {
+    padding: 12px;
+    width: 130px;
+    border: none;
+    border-radius: 19px;
+    font-weight: 600;
+    font-size: medium;
+    color: #ffffff;
+    background-color: #2563eb;
+}
+
+/* Estilos Perfil Usuario */
+
+#info-apo{
+    color: #2563eb
+}
+
+.container1{
+    display: flex;
+    flex-direction: row;
+    
+    justify-content: space-evenly;
+}
+
+.container h1 {
+    color: #333;
+    text-align: center;
+    font-size: 28px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.info-box1 {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-bottom: 20px;
+    width: 700px;
+    padding: 20px;
+}
+
+.info-box2 {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    width: 700px;
+    padding: 20px;
+}
+
+.info-box3 {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    justify-content: space-evenly;
+}
+
+.serv-trans{
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-bottom: 20px;
+    width: 450px;
+    padding: 20px;
+}
+
+.info-box1:hover, .info-box2:hover, .serv-trans:hover, .schedule-form:hover, .scheduled-meetings:hover {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 6px 15px;
+}
+
+.container h2 {
+    color: #2c3e50;
+    font-size: 22px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.container p {
+    margin: 10px 0;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.container strong {
+    color: #34495e;
+}
+
+.container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.container li {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.container li:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+/* Estilos para el formulario de agendar reunión */
+.schedule-form {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-bottom: 20px;
+    width: 450px;
+    padding: 20px;
+}
+
+.schedule-form h2 {
+    color: #2c3e50;
+    font-size: 22px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #34495e;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.submit-btn {
+    background-color: #2563eb;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+}
+
+.submit-btn:hover {
+    background-color: #1e40af;
+}
+
+/* Estilos para las reuniones agendadas */
+.scheduled-meetings {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-bottom: 20px;
+    width: 450px;
+    padding: 20px;
+}
+
+.scheduled-meetings h2 {
+    color: #2c3e50;
+    font-size: 22px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.meeting-card {
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 15px;
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.meeting-icon {
+    flex-shrink: 0;
+}
+
+.clock-icon {
+    width: 24px;
+    height: 24px;
+    border: 2px solid #6b7280;
+    border-radius: 50%;
+    position: relative;
+}
+
+.clock-icon::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 8px;
+    height: 2px;
+    background-color: #6b7280;
+    transform: translate(-50%, -50%);
+}
+
+.clock-icon::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2px;
+    height: 8px;
+    background-color: #6b7280;
+    transform: translate(-50%, -50%);
+}
+
+.meeting-content {
+    flex-grow: 1;
+}
+
+.meeting-content h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 8px;
+}
+
+.meeting-description {
+    font-size: 14px;
+    color: #4b5563;
+    margin-bottom: 12px;
+}
+
+.meeting-status {
+    font-size: 14px;
+    color: #6b7280;
+    margin-bottom: 12px;
+}
+
+.meeting-support {
+    font-size: 14px;
+    color: #9ca3af;
+    margin-bottom: 0;
+}
+
+/* Footer */
+
+.footer {
+    background-color: #111827;
+    color: #fff;
+    padding: 50px;
+    text-align: left;
+    position: static;
+    width: 100%;
+    bottom: 0;
+}
+
+.footer .container {
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    color: #fff;
+}
+
+.social-icons a{
+    text-decoration: none;
+    color: #A4A9B1;
+}
+
+.footer .column {
+    flex: 1;
+    margin: 10px;
+}
+
+.footer .column h3 {
+    margin-bottom: 10px;
+}
+
+.footer .column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer .column ul li {
+    color: #A4A9B1;
+    margin: 5px 0;
+}
+
+.column a{
+    text-decoration: none;
+}
+
+.column p {
+    color: #A4A9B1;
+    margin-bottom: 15px;
+}
+
+.footer .social-icons img {
+    width: 50px;
+    margin: 0 5px;
+}
+
+.footer .copyright {
+    margin-top: 60px;
+    color: #A4A9B1;
+    text-align: center;
+}

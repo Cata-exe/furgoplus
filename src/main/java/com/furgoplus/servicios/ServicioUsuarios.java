@@ -6,7 +6,6 @@ import org.mindrot.jbcrypt.BCrypt;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.validation.BindingResult;
-
 import com.furgoplus.modelos.Rol;
 import com.furgoplus.modelos.Usuario;
 import com.furgoplus.modelos.UsuarioLogin;
