@@ -29,8 +29,8 @@
                     </div>
                     <div class="paso">
                         <div class="numPaso">3</div>
-                        <h2>Antecedentes y permisos</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero officia inventore quae ipsa?</p>
+                        <h2>Licencias y permisos</h2>
+                        <p>Ingresa los documentos y permisos requeridos para operar transporte escolar.</p>
                     </div>
                     <div class="paso">
                         <div class="numPaso">4</div>
