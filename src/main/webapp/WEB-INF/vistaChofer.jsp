@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,10 +18,10 @@
         <div class="infoPersonal">
             <div class="chofer">
                 <h2>Información Personal</h2>
-                <img src="./img/luis.jpg" alt="imagen de chofer Luis">
+                <img src="${usuario.imagen}" alt="imagen de ${usuario.nombre}">
                 <div class="aside">
-                    <h1>${nombre}</h1>
-                    <p>ID: COND-12345</p>
+                    <h1>${usuario.nombre}</h1>
+                    <p>ID: ${usuario.id}</p>
                     <div class="estrellas">
                         <p>★</p>
                         <span>4.8 (120 reseñas)</span>
@@ -32,56 +32,61 @@
                     <span>Concepción, Chile</span>
                 </div>
                 <div class="detallesChofer">
-                    <i class="fi fi-rr-phone-call"></i>
-                    <span>+56 9 1234 5678</span>
-                </div>
-                <div class="detallesChofer">
                     <i class="fi fi-rr-envelope"></i>
-                    <span>luis.martínez@example.com</span>
+                    <span>${usuario.correo}</span>
                 </div>
                 <div class="detallesChofer">
                     <i class="fi fi-rs-calendar"></i>
-                    <span>Miembro desde: Octubre 2021</span>
+                    <span>Miembro desde: ${usuario.fechaCreacion}</span>
                 </div>
             </div>
+            
             <div class="vehiculo">
-                <h2>Información del Furgón</h2>
-                <div class="infoFurgon">
-                    <h3>Vehículo</h3>
-                    <p>Toyota Hiace 2019</p>
-                    <h3>Patente</h3>
-                    <p>AB-CD-12</p>
-                    <h3>Capacidad</h3>
-                    <p>12 Pasajeros</p>
-                    <h3>Caracteristicas</h3>
-                    <div class="caracteristicasVehiculo">
-                        <span>Aire acondicionado</span>
-                        <span>Cinturones de seguridad</span>
-                        <span>GPS</span>
-                        <span>Cámara de seguridad</span>
-                    </div>
-                </div>
-            </div>
+			    <h2>Información del Furgón</h2>
+			    <div class="infoFurgon">
+			        <c:forEach var="vehiculo" items="${vehiculos}">
+			            <h3>Vehículo</h3>
+			            <p>${vehiculo.marca} ${vehiculo.modelo} ${vehiculo.anio}</p>
+			            <h3>Patente</h3>
+			            <p>${vehiculo.patente}</p>
+			            <h3>Capacidad</h3>
+			            <p>${vehiculo.cantidad} Pasajeros</p>
+			            <h3>Características</h3>
+			            <div class="caracteristicasVehiculo">
+			                <span>Aire acondicionado</span>
+			                <span>Cinturones de seguridad</span>
+			                <span>GPS</span>
+			                <span>Cámara de seguridad</span>
+			            </div>
+			        </c:forEach>
+			    </div>
+			    <form action="/registrofurgon" method="get">
+	            	<button id="logoutBtn">Agregar Vehiculo</button>
+	            </form>
+			</div>
+            
         </div>
         <div class="documentos">
-            <h2>Certificaciones y Documentos</h2>
-            <div class="iconoEscudo">
-                <i class="fi fi-rs-shield"></i>
-                <span>Licencia de conducir Clase A3 vigente</span>
-            </div>
-            <div class="iconoEscudo">
-                <i class="fi fi-rs-shield"></i>
-                <span>Curso de capacitación en transporte escolar</span>
-            </div>
-            <div class="iconoEscudo">
-                <i class="fi fi-rs-shield"></i>
-                <span>Certificado de antecedentes al día</span>
-            </div>
-            <div class="iconoEscudo">
-                <i class="fi fi-rs-shield"></i>
-                <span>Registro Nacional de Transporte Escolar</span>
-            </div>
-        </div>
+		    <h2>Certificaciones y Documentos</h2>
+		    <c:forEach var="documento" items="${documentosChoferes}">
+		        <div class="iconoEscudo">
+		            <i class="fi fi-rs-shield"></i>
+		            <span>${documento.carnetIdentidad}</span>
+		        </div>
+		        <div class="iconoEscudo">
+		            <i class="fi fi-rs-shield"></i>
+		            <span>${documento.certificadoRenastre}</span>
+		        </div>
+		        <div class="iconoEscudo">
+		            <i class="fi fi-rs-shield"></i>
+		            <span>${documento.certificadoRegistroPenal}</span>
+		        </div>
+		        <div class="iconoEscudo">
+		            <i class="fi fi-rs-shield"></i>
+		            <span>${documento.licenciaConducir}</span>
+		        </div>
+		    </c:forEach>
+		</div>
         <div class="rutas">
             <h2>Rutas y Horarios</h2>
             <div class="rutaUno">
@@ -96,128 +101,57 @@
             </div>
         </div>
         <div class="reuniones">
-            <h2>Tus Próximas Reuniones</h2>
-            <div class="contedorReunion">
-                <div class="reunionesBox">
-                    <div class="reunionHeader">
-                        <div class="avatar">
-                            <img src="./img/claudia.jpg" alt="imagen de claudia">
-                        </div>
-                        <div>
-                            <h3>Claudia Rojas</h3>
-                            <p>Reunión Pendiente</p>
-                        </div>
-                    </div>
-                    <ul class="reunionDetalles">
-                        <li><i class="fi fi-rs-calendar"></i> 2023-11-25</li>
-                        <li><i class="fi fi-rr-clock-three"></i> 15:00</li>
-                        <li><i class="fi fi-rs-marker"></i> Café Central, Las Condes</li>
-                    </ul>
-                    <button class="btnConfirmar">Confirmar Reunión</button>
-                </div>
-                <div class="reunionesBox">
-                    <div class="reunionHeader">
-                        <div class="avatar">
-                            <img src="./img/carlos.jpg" alt="imagen de carlos">
-                        </div>
-                        <div>
-                            <h3>Carlos Díaz</h3>
-                            <p>Reunión Confirmada</p>
-                        </div>
-                    </div>
-                    <ul class="reunionDetalles">
-                        <li><i class="fi fi-rs-calendar"></i> 2023-11-26</li>
-                        <li><i class="fi fi-rr-clock-three"></i> 10:30</li>
-                        <li><i class="fi fi-rs-marker"></i> Parque Araucano, Las Condes</li>
-                    </ul>
-                    <button class="btnConfirmar">Confirmar Reunión</button>
-                </div>
-                <div class="reunionesBox">
-                    <div class="reunionHeader">
-                        <div class="avatar">
-                            <img src="./img/maria.jpg" alt="imagen de maria">
-                        </div>
-                        <div>
-                            <h3>María Fernanda González</h3>
-                            <p>Reunión Pendiente</p>
-                        </div>
-                    </div>
-                    <ul class="reunionDetalles">
-                        <li><i class="fi fi-rs-calendar"></i> 2023-11-27</li>
-                        <li><i class="fi fi-rr-clock-three"></i> 14:00</li>
-                        <li><i class="fi fi-rs-marker"></i> Colegio San Carlos, Vitacura</li>
-                    </ul>
-                    <button class="btnConfirmar">Confirmar Reunión</button>
-                </div>
-            </div>
-        </div>
+		    <h2>Tus Próximas Reuniones</h2>
+		    <c:forEach var="reunion" items="${reuniones}">
+		        <div class="contedorReunion">
+		            <div class="reunionesBox">
+		                <div class="reunionHeader">
+		                    <div class="avatar">
+		                        <img src="./img/claudia.jpg" alt="imagen de claudia">
+		                    </div>
+		                    <div>
+		                        <h3>${reunion.apoderado.usuario.nombre}</h3>
+		                        <p>Reunión ${reunion.choferConfirmado == 1 ? 'Confirmada' : 'Pendiente'}</p>
+		                    </div>
+		                </div>
+		                <ul class="reunionDetalles">
+		                    <li><i class="fi fi-rs-calendar"></i> ${reunion.fechaProgramada}</li>
+		                    <li><i class="fi fi-rr-clock-three"></i> ${reunion.fechaProgramada}</li>
+		                    <li><i class="fi fi-rs-marker"></i> ${reunion.ubicacion}</li>
+		                </ul>
+		                <button class="btnConfirmar">Confirmar Reunión</button>
+		            </div>
+		        </div>
+		    </c:forEach>
+		</div>
         <div class="pasajeros">
-            <h2>Lista de Pasajeros</h2>
-            <table class="estudiantes">
-                <thead>
-                    <tr>
-                        <th>Nombre</th>
-                        <th>Edad</th>
-                        <th>Escuela</th>
-                        <th>Dirección</th>
-                        <th>Apoderado</th>
-                        <th>Teléfono Apoderado</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Sofía Rodríguez</td>
-                        <td>8 años</td>
-                        <td>Colegio San José</td>
-                        <td>Av. Las Condes 1234</td>
-                        <td>Ana Rodríguez</td>
-                        <td>+56 9 8765 4321</td>
-                    </tr>
-                    <!--de aca hay que borrar porque es solo para llenar espacio ya que solo se ocuparia una con los datos de la base de datos-->
-                    <tr>
-                        <td>Mateo Gómez</td>
-                        <td>10 años</td>
-                        <td>Escuela Santa María</td>
-                        <td>Calle Providencia 567</td>
-                        <td>Carlos Gómez</td>
-                        <td>+56 9 2345 6789</td>
-                    </tr>
-                    <tr>
-                        <td>Mateo Gómez</td>
-                        <td>10 años</td>
-                        <td>Escuela Santa María</td>
-                        <td>Calle Providencia 567</td>
-                        <td>Carlos Gómez</td>
-                        <td>+56 9 2345 6789</td>
-                    </tr>
-                    <tr>
-                        <td>Mateo Gómez</td>
-                        <td>10 años</td>
-                        <td>Escuela Santa María</td>
-                        <td>Calle Providencia 567</td>
-                        <td>Carlos Gómez</td>
-                        <td>+56 9 2345 6789</td>
-                    </tr>
-                    <tr>
-                        <td>Mateo Gómez</td>
-                        <td>10 años</td>
-                        <td>Escuela Santa María</td>
-                        <td>Calle Providencia 567</td>
-                        <td>Carlos Gómez</td>
-                        <td>+56 9 2345 6789</td>
-                    </tr>
-                    <tr>
-                        <td>Mateo Gómez</td>
-                        <td>10 años</td>
-                        <td>Escuela Santa María</td>
-                        <td>Calle Providencia 567</td>
-                        <td>Carlos Gómez</td>
-                        <td>+56 9 2345 6789</td>
-                    </tr>
-                    <!--Hasta aca :3-->
-                </tbody>
-            </table>
-        </div>
+		    <h2>Lista de Pasajeros</h2>
+		    <table class="estudiantes">
+		        <thead>
+		            <tr>
+		                <th>Nombre</th>
+		                <th>Edad</th>
+		                <th>Escuela</th>
+		                <th>Dirección</th>
+		                <th>Apoderado</th>
+		                <th>Teléfono Apoderado</th>
+		            </tr>
+		        </thead>
+		        <tbody>
+		            <!-- Iterando sobre los pasajeros desde la base de datos -->
+		            <c:forEach var="pasajero" items="${pasajeros}">
+		                <tr>
+		                    <td>${pasajero.nombre}</td>
+		                    <td>${pasajero.edad}</td>
+		                    <td>${pasajero.escuela}</td>
+		                    <td>${pasajero.direccion}</td>
+		                    <td>${pasajero.apoderado}</td>
+		                    <td>${pasajero.telefonoApoderado}</td>
+		                </tr>
+		            </c:forEach>
+		        </tbody>
+		    </table>
+		</div>
         <div class="review">
             <h2>Reseñas Recientes</h2>
             <div class="valoraciones">

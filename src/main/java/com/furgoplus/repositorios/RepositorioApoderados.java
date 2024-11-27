@@ -10,4 +10,5 @@ import com.furgoplus.modelos.Apoderado;
 @Repository
 public interface RepositorioApoderados extends CrudRepository<Apoderado, Long>{
 	List<Apoderado> findAll();
+	List<Apoderado> findByUsuarioId(Long usuarioId);
 }

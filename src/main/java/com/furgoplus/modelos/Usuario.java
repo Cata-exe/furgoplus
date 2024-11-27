@@ -55,6 +55,9 @@ public class Usuario {
 	@Column(unique = true)
 	private String correo;
 	
+	@NotBlank(message = "Por favor proporciona el celular")
+	private String celular;
+	
 	@NotBlank(message = "Por favor proporciona la contraseña.")
 	private String contrasenia;
 	
@@ -99,6 +102,14 @@ public class Usuario {
 
 	public void setCorreo(String correo) {
 		this.correo = correo;
+	}
+
+	public String getCelular() {
+		return celular;
+	}
+
+	public void setCelular(String celular) {
+		this.celular = celular;
 	}
 
 	public String getContrasenia() {

@@ -43,8 +43,13 @@
                 </div>
                 <div>
                     <form:label class="form-label" path="usuario.imagen">Imagen:</form:label>
-                    <form:input class="form-control" path="usuario.imagen" type="password"/>
+                    <form:input class="form-control" path="usuario.imagen"/>
                     <form:errors class="alert alert-danger d-block" path="usuario.imagen"/>
+                </div>
+                <div>
+                    <form:label class="form-label" path="usuario.celular"> Celular: </form:label>
+                    <form:input class="form-control" path="usuario.celular"/>
+                    <form:errors class="alert alert-danger d-block" path="usuario.celular" />
                 </div>
 
                 <div>

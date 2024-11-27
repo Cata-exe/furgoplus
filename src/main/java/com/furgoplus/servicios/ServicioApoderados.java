@@ -29,6 +29,11 @@ public class ServicioApoderados {
 		return this.repositorioApoderados.save(apoderado); 
 	}
 	
-	
-	
+	public List<Apoderado> obtenerApoderadosPorUsuario(Long usuarioId) {
+        return repositorioApoderados.findByUsuarioId(usuarioId);
+    }
+
+    public Apoderado obtenerApoderadoPorId(Long id) {
+        return repositorioApoderados.findById(id).orElse(null);
+    }
 }

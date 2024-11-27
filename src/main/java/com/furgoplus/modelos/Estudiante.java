@@ -19,6 +19,7 @@ import jakarta.persistence.Table;
 import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Positive;
 
 @Entity
 @Table(name="estudiantes")
@@ -40,6 +41,12 @@ public class Estudiante {
 	
 	@NotBlank(message = "Por favor proporciona el nombre.")
 	private String nombre;
+	
+	@NotBlank(message = "Por favor proporciona la direccion")
+	private String direccion;
+	
+	@Positive(message = "Por favor proporciona un tiempo positivo.")
+	private int edad;
 	
 	@Temporal(TemporalType.DATE)
 	@Column(name="fecha_creacion")
@@ -81,6 +88,22 @@ public class Estudiante {
 
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
+	}
+
+	public String getDireccion() {
+		return direccion;
+	}
+
+	public void setDireccion(String direccion) {
+		this.direccion = direccion;
+	}
+
+	public int getEdad() {
+		return edad;
+	}
+
+	public void setEdad(int edad) {
+		this.edad = edad;
 	}
 
 	public Date getFechaCreacion() {

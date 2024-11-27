@@ -17,6 +17,9 @@
 		
 		<div class="container">
 			<h1>Bienvenido de vuelta apoderado ${nombre}</h1>
+			<c:forEach items="${estudiantes}" var="estudiante">
+				<a>${estudiante.nombre}</a>
+			</c:forEach>
 			<div class="conductorFilter row">
 				<h1> Conductores </h1>
 			</div>

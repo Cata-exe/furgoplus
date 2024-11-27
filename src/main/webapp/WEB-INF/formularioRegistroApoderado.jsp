@@ -33,13 +33,18 @@
                     <form:errors class="alert alert-danger d-block" path="correo" />
                 </div>
                 <div>
+                    <form:label class="form-label" path="celular"> Celular: </form:label>
+                    <form:input class="form-control" path="celular"/>
+                    <form:errors class="alert alert-danger d-block" path="celular" />
+                </div>
+                <div>
                     <form:label class="form-label" path="contrasenia"> Contraseña: </form:label>
                     <form:input class="form-control" path="contrasenia" type="password"/>
                     <form:errors class="alert alert-danger d-block" path="contrasenia" />
                 </div>
                 <div>
                     <form:label class="form-label" path="confirmacionContrasenia"> Confirmar Contraseña: </form:label>
-                    <form:input class="form-control" path="confirmacionContrasenia"/>
+                    <form:input class="form-control" path="confirmacionContrasenia" type="password"/>
                     <form:errors class="alert alert-danger d-block" path="confirmacionContrasenia" />
                 </div>
                 <button class="btnRegistrarse">

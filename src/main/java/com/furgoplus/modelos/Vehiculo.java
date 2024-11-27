@@ -19,6 +19,7 @@ import jakarta.persistence.Table;
 import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Positive;
 
 @Entity
 @Table(name="vehiculos")
@@ -40,13 +41,13 @@ public class Vehiculo {
 	@NotBlank(message = "Por favor proporciona la patente.")
 	private String patente;
 	
-	@NotBlank(message = "Por favor proporciona el modelo.")
+	@Positive(message = "Por favor proporciona un tiempo positivo.")
 	private int cantidad;
 	
 	@NotBlank(message = "Por favor proporciona la marca.")
 	private String marca;
 	
-	@NotBlank(message = "Por favor proporciona el anio.")
+	@Positive(message = "Por favor proporciona un tiempo positivo.")
 	private int anio;
 	
 	@Temporal(TemporalType.DATE)

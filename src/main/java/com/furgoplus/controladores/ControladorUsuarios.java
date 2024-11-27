@@ -15,13 +15,20 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.furgoplus.modelos.Apoderado;
 import com.furgoplus.modelos.DocumentoChofer;
+import com.furgoplus.modelos.Estudiante;
 import com.furgoplus.modelos.RegistroChoferDTO;
+import com.furgoplus.modelos.Reunion;
 import com.furgoplus.modelos.Rol;
 import com.furgoplus.modelos.Usuario;
 import com.furgoplus.modelos.UsuarioLogin;
+import com.furgoplus.modelos.Vehiculo;
 import com.furgoplus.servicios.ServicioApoderados;
 import com.furgoplus.servicios.ServicioChoferes;
+import com.furgoplus.servicios.ServicioDocumentosChofer;
+import com.furgoplus.servicios.ServicioEstudiantes;
+import com.furgoplus.servicios.ServicioReuniones;
 import com.furgoplus.servicios.ServicioUsuarios;
+import com.furgoplus.servicios.ServicioVehiculos;
 
 import jakarta.servlet.http.HttpSession;
 import jakarta.validation.Valid;
@@ -34,14 +41,29 @@ public class ControladorUsuarios {
     private final ServicioApoderados servicioApoderados;
     @Autowired
     private final ServicioChoferes servicioChoferes;
+    @Autowired
+    private final ServicioVehiculos servicioVehiculos;
+    @Autowired
+    private final ServicioDocumentosChofer servicioDocumentosChofer;
+    @Autowired
+    private final ServicioReuniones servicioReuniones;
+    @Autowired
+    private final ServicioEstudiantes servicioEstudiantes;
 
-    public ControladorUsuarios(ServicioUsuarios servicioUsuarios, ServicioApoderados servicioApoderados, ServicioChoferes servicioChoferes) {
-        this.servicioUsuarios = servicioUsuarios;
-        this.servicioApoderados = servicioApoderados;
-        this.servicioChoferes = servicioChoferes;
-    }
-    
-    @GetMapping("/vista")
+	public ControladorUsuarios(ServicioUsuarios servicioUsuarios, ServicioApoderados servicioApoderados,
+			ServicioChoferes servicioChoferes, ServicioVehiculos servicioVehiculos,
+			ServicioDocumentosChofer servicioDocumentosChofer, ServicioReuniones servicioReuniones,
+			ServicioEstudiantes servicioEstudiantes) {
+		this.servicioUsuarios = servicioUsuarios;
+		this.servicioApoderados = servicioApoderados;
+		this.servicioChoferes = servicioChoferes;
+		this.servicioVehiculos = servicioVehiculos;
+		this.servicioDocumentosChofer = servicioDocumentosChofer;
+		this.servicioReuniones = servicioReuniones;
+		this.servicioEstudiantes = servicioEstudiantes;
+	}
+
+	@GetMapping("/vista")
     public String vistaUsuarios(@RequestParam(value = "filtro", required = false) String filtro, Model model, HttpSession session) {
     	Usuario usuario = (Usuario) session.getAttribute("usuario");
 
@@ -52,13 +74,22 @@ public class ControladorUsuarios {
         	        usuarios = this.servicioUsuarios.buscarChoferesPorNombre(filtro);
         	    } else {
         	    	usuarios = this.servicioUsuarios.obtenerUsuarioChofer(Rol.chofer);
-        	    	usuarios.sort(Comparator.comparing(Usuario::getNombre));
-        	    }
+        	    	usuarios.sort(Comparator.comparing(Usuario::getNombre));        	    }
+            	List<Estudiante> estudiantes = this.servicioEstudiantes.obtenerTodos();
             	model.addAttribute("usuarios", usuarios);
+            	model.addAttribute("estudiantes", estudiantes);
             	model.addAttribute("filtro", filtro);
                 return "vistaApoderado.jsp";
             } else if (usuario.getRol() == Rol.chofer) {
-            	List<Usuario> usuarios = this.servicioUsuarios.obtenerUsuarioChofer(Rol.chofer); 
+            	List<Vehiculo> vehiculos = this.servicioVehiculos.obtenerVehiculosPorUsuario(usuario.getId());
+                List<DocumentoChofer> documentosChoferes = this.servicioDocumentosChofer.obtenerDocumentosPorUsuario(usuario.getId());
+                List<Reunion> reuniones = this.servicioReuniones.obtenerReunionesPorUsuario(usuario.getId());
+                
+                model.addAttribute("chofer", usuario);
+                model.addAttribute("vehiculos", vehiculos); 
+                model.addAttribute("documentosChoferes", documentosChoferes); 
+                model.addAttribute("reuniones", reuniones);
+                
                 return "vistaChofer.jsp";
             }
         }
