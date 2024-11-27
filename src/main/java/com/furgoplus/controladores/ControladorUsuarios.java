@@ -58,6 +58,7 @@ public class ControladorUsuarios {
             	model.addAttribute("filtro", filtro);
                 return "vistaApoderado.jsp";
             } else if (usuario.getRol() == Rol.chofer) {
+            	List<Usuario> usuarios = this.servicioUsuarios.obtenerUsuarioChofer(Rol.chofer); 
                 return "vistaChofer.jsp";
             }
         }

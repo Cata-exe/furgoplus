@@ -1,0 +1,274 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+body { 
+    background-color: #f0f7ff;
+}
+
+/* estilos de perfil del conductor*/
+
+header {
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    gap: 900px;
+    border-bottom: solid 1px rgb(228, 228, 231);
+}
+
+header>button{
+    letter-spacing: 1.5px;
+    padding: 12px;
+    width: 150px;
+    border: none;
+    border-radius: 19px;
+    font-weight: 600;
+    font-size: medium;
+    color: #ffffff;
+    background-color: #2563eb;
+}
+
+header h1 {
+    color: #2563eb;
+}
+
+/* estilos de pagina de perfil conductor  */
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 32px;
+}
+
+main > div {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 32px;
+    padding: 24px;
+}
+
+h2 {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+/* Información Personal */
+
+.infoPersonal {
+    display: flex;
+    gap: 32px;
+}
+
+.chofer, .vehiculo {
+    flex: 1;
+    min-width: 300px;
+}
+
+.chofer {
+    position: relative;
+}
+
+.chofer img {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50px;
+    left: 0;
+}
+
+.aside {
+    margin-left: 120px;
+    margin-top: 20px;
+}
+
+.aside h1 {
+    font-size: 24px;
+    margin-bottom: 4px;
+}
+
+.aside p {
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.estrellas {
+    display: flex;
+    align-items: center;
+}
+
+.estrellas p {
+    color: #2563eb;
+    font-size: 20px;
+    margin-right: 4px;
+}
+
+.detallesChofer {
+    margin-top: 20px;
+    margin-bottom: 8px;
+}
+
+.detallesChofer i {
+    margin-right: 8px;
+    color: #2563eb;
+}
+
+/* Información del Furgón */
+.infoFurgon h3 {
+    margin: 8px 0 ;
+}
+
+.caracteristicasVehiculo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.caracteristicasVehiculo span {
+    background-color: #e9ecef;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* Certificaciones y Documentos */
+.iconoEscudo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.iconoEscudo i {
+    margin-right: 12px;
+    color: #28a745;
+    font-size: 20px;
+}
+
+/* Rutas y Horarios */
+.rutaUno, .rutaDos {
+    margin-bottom: 16px;
+}
+
+.rutaUno h3, .rutaDos h3 {
+    margin-bottom: 4px;
+    color: #2563eb;
+}
+
+.rutaUno p:last-child, .rutaDos p:last-child {
+    color: #6c757d;
+    font-size: 14px;
+}
+
+/* Reuniones */
+.contedorReunion {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 16px;
+}
+
+.reunionesBox {
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 16px;
+}
+
+.reunionHeader {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 16px;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.reunionDetalles {
+    list-style-type: none;
+    padding: 0;
+}
+
+.reunionDetalles li {
+    margin-bottom: 8px;
+}
+
+.reunionDetalles i {
+    margin-right: 8px;
+    color: #2563eb;
+}
+
+.btnConfirmar {
+    width: 100%;
+    margin-top: 16px;
+    background-color: #2563eb;
+    font-size: medium;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Lista de Pasajeros */
+.estudiantes {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.estudiantes th, .estudiantes td {
+    text-align: left;
+    padding: 12px;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.estudiantes th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+}
+
+/* Reseñas */
+.valoraciones {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.estrellaReview {
+    color: #2563eb;
+    font-size: 18px;
+}
+
+.valoraciones span:last-child {
+    color: #6c757d;
+    font-size: 14px;
+}
+
+.review p {
+    margin-bottom: 8px;
+}
+
+.review p:last-child {
+    color: #6c757d;
+    font-style: italic;
+}
+
