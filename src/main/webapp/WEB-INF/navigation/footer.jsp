@@ -24,10 +24,7 @@
 	                <h3>Para Apoderados</h3>
 	                <ul>
 	                    <a href="/comofunciona">
-	                        <li>Como Funciona</li>
-	                    </a>
-	                    <a href="#">
-	                        <li>Buscar Conductor</li>
+	                        <li>¿Cómo Funciona?</li>
 	                    </a>
 	                    <a href="faqs">
 	                        <li>Preguntas Frecuentes</li>

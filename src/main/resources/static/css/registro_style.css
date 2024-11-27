@@ -27,12 +27,12 @@ body {
 
 #formularioChofer {
     height: 100%;
-    max-height: 950px;
+    max-height: 1150px;
 }
 
 #formularioApoderado {
     height: 100%;
-    max-height: 600px;
+    max-height: 650px;
 }
 
 .formularioRegistro h1 {
@@ -109,4 +109,9 @@ form {
 
 .noacc a:hover {
     text-decoration: underline;
+}
+
+
+.footer {
+	margin-top: 120px;
 }

@@ -89,6 +89,7 @@ body {
 }
 
 .btnInicioSesion {
+	margin-top: 30px;
     width: 100%;
     background-color: #1a73e8;
     color: white;

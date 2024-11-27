@@ -17,7 +17,7 @@
     
     <div class="formularioRegistro" id="formularioChofer">
         <div class="row">
-            <h1>Registro de Chofer</h1>
+            <h1>Registro de Conductor</h1>
         </div>
         <div class="inputsRegistro">
             <form:form class="col-6" action="/procesa/registro/chofer" method="POST" modelAttribute="registroChoferDTO">
@@ -69,7 +69,7 @@
                 </div>
 
                 <button class="btnRegistrarse">Registrarse</button>
-                <p class="noacc">¿Ya eres chofer? <a href="/login">Inicia Sesión</a></p>
+                <p class="noacc">¿Ya eres conductor? <a href="/login">Inicia Sesión</a></p>
             </form:form>
         </div>
     </div>

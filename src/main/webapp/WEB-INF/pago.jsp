@@ -6,30 +6,16 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>FurgoPlus</title>
+    	<link rel="icon" href="./furgoplus.ico" type="image/x-icon">
 		<link rel="stylesheet" href="${pageContext.request.contextPath}/css/inicio_style.css">
-		<link rel="stylesheet" href="${pageContext.request.contextPath}/css/navigation_style.css">
 		<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css'>
 	</head>
 	<body>
-		<nav class="navbar">
-	        <div class="logo">
-	            <h1>Furgo<span id="plus">Plus</span></h1>
-	            <p>Transporte Escolar</p>
-	        </div>
-	        <ul class="nav-links">
-	            <li><a href="/">Inicio</a></li>
-	            <li><a href="#">Conductores</a></li>
-	            <li><a href="#">Mi Perfil</a></li>
-	        </ul>
-	        <div class="navBtns">
-	        	<form action="" method="get">
-	            	<button id="loginBtn">Cerrar Sesión</button>
-	            </form>
-	            <form action="" method="get">
-	            	<button id="registroBtn">Editar Perfil</button>
-	            </form>
-	        </div>
-	    </nav>
+		<jsp:include page="/WEB-INF/navigation/nav.jsp">
+			<jsp:param name="isUserLoggedIn" value="true" />
+		</jsp:include>
+	
+	
 	    <main class="containerPagoPrincipal">
 	        <div class="containerPago">
 	            <div class="pagoSuperior">

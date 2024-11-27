@@ -59,7 +59,7 @@
 }
 
 #loginBtn:hover, 
-#registroBtn:hover{
+#registroBtn:hover, #logoutBtn{
     cursor: pointer;
 }
 
@@ -74,11 +74,11 @@
     color: #2563eb;
 }
 
-#registroBtn:hover {
+#registroBtn:hover, #logoutBtn:hover {
     background-color: #1e5adc;
 }
 
-#registroBtn {
+#registroBtn, #logoutBtn {
     padding: 12px;
     width: 130px;
     border: none;
@@ -88,6 +88,11 @@
     color: #ffffff;
     background-color: #2563eb;
 }
+
+#logoutBtn {
+	width: 150px;
+}
+
 
 /* Footer */
 

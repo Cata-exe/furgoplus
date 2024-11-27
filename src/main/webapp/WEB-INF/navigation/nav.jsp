@@ -26,7 +26,7 @@
 			%>
 					<ul class="nav-links">
 			            <li><a href="/">Inicio</a></li>
-			            <li><a href="#">Conductores</a></li>
+			            <li><a href="/requisitos">Conductores</a></li>
 			            <li><a href="/nosotros">Nosotros</a></li>
 			            <li><a href="/contacto">Contacto</a></li>
 			        </ul>

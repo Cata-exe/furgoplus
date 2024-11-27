@@ -16,7 +16,7 @@
 		<main class="mainNav">
 			<form:form class="col-6" action="/procesa/login" method="POST" modelAttribute="usuarioLogin">
 		        <div class="containerMain">
-		            <h1>Haz login con tu cuenta</h1>
+		            <h1>Inicia sesión con tu cuenta</h1>
 		            <div class="containerLogin">
 		            	<div>
 							<form:label class="form-label" path="correoLogin"> Correo: </form:label>
@@ -28,14 +28,11 @@
 							<form:input class="form-control" path="contraseniaLogin" type="password"/>
 							<form:errors class="alert alert-danger d-block" path="contraseniaLogin" /> 
 						</div>
-		             
-		                <div class="buttons">
-		                    <a href="">¿Olvidó La Contraseña?</a>
-		                </div>
+		            
 		                <button class="btnInicioSesion">
 							Iniciar Sesión
 						</button>
-		                <h3 class="noacc">¿No eres miembro? <a href="/opcionregistro">Registrate</a></h3>
+		                <h3 class="noacc">¿No eres miembro? <a href="/opcionregistro">Regístrate</a></h3>
 		            </div>
 		        </div>
 	        </form:form>

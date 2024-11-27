@@ -5,7 +5,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Info Chofer</title>
+    <title>FurgoPlus</title>
+    <link rel="icon" href="./furgoplus.ico" type="image/x-icon">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/detalle_chofer_style.css">
     <link rel='stylesheet'
         href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
@@ -21,10 +22,10 @@
     <main class="mainDiv">  
         <div class="infoContainer">
           <div class="containerChofer">
-            <h1>Información Chofer</h1>
+            <h1>Información Conductor</h1>
             <div class="choferFlexContainer">
               <div class="containerInfo">
-                <h2>Nombre Chofer</h2>
+                <h2>Nombre Conductor</h2>
                 <p>${chofer.nombre}</p>
                 <h2>Establecimientos</h2>
                 <p>Liceo Bicentenario, Colegio Las Quintas, Jardín Rositas</p>
@@ -34,13 +35,13 @@
                 </c:forEach>
                 <div class="btnInfo">
                   <form action="/calificar" method="GET">
-                  	<button class="btn btn-success">
+                  	<button class="recomendarBtn">
 						Recomendar
 					</button>
                   </form>
                   
                   <form action="/contratar" method="GET">
-                  	<button class="btn btn-success">
+                  	<button class="contratarBtn">
 						Contratar
 					</button>
                   </form>

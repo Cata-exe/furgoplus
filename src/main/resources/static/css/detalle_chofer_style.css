@@ -12,88 +12,6 @@ body {
    	min-height: 100vh;
 }
 
-/* estilos de la barra de navegacion y sus elementos*/
-
-.navbar {
-    background-color: white;
-    color: #2C2C2C;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px 40px;
-}
-
-#plus {
-    color: #2563eb;
-}
-
-.logo p {
-    font-size: small;
-    letter-spacing: 1px;
-}
-
-.logo h1 {
-    letter-spacing: 2px;
-}
-
-.nav-links {
-    list-style-type: none;
-    display: flex;
-    gap: 60px;
-
-}
-
-.nav-links li a {
-    color: #787878;
-    font-size: 18px;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.nav-links li a:hover {
-    cursor: pointer;
-    color: #2563eb;
-}
-
-.navBtns{
-    display: flex;
-    gap: 30px;
-}
-
-#loginBtn:hover, 
-#registroBtn:hover{
-    cursor: pointer;
-}
-
-#loginBtn {
-    background: none;
-    border: none;
-    color: #2C2C2C;
-    font-size: medium;
-}
-
-#loginBtn:hover {
-    color: #2563eb;
-}
-
-#registroBtn:hover {
-    background-color: #1e5adc;
-}
-
-#registroBtn, #logoutBtn {
-    padding: 12px;
-    width: 130px;
-    border: none;
-    border-radius: 19px;
-    font-weight: 600;
-    font-size: medium;
-    color: #ffffff;
-    background-color: #2563eb;
-}
-
-#logoutBtn {
-	width: 150px;
-}
 
 /* estilos del main container e información chofer y furgon*/
 
@@ -169,29 +87,41 @@ body {
   }
   
   /* Botones de acción */
+  
   .btnInfo {
     display: flex;
     gap: 16px;
-    margin-top: 50px;
+    padding: 10px 0;
+    margin-top: 40px;
   }
   
-  .btnInfo input[type="button"] {
-    padding: 12px 24px;
+  .recomendarBtn, .contratarBtn {
+   padding: 12px;
+    width: 130px;
     border: none;
-    border-radius: 8px;
-    cursor: pointer;
+    border-radius: 15px;
     font-weight: 600;
-  }
-  
-  .btnInfo input[type="button"]:first-child {
-    background-color: #64748b;
-    color: white;
-  }
-  
-  .btnInfo input[type="button"]:last-child {
-    background-color: #3b82f6;
-    color: white;
-  }
+    border: solid 2px #2563eb;
+    font-size: medium;
+    color: #ffffff;
+    background-color: #2563eb;
+    cursor: pointer;
+   }
+   
+   .contratarBtn {
+   	width: 140px;
+    border: solid 2px #2563eb;
+    background-color: white;
+    color: #2563eb;
+   }
+   
+   .recomendarBtn:hover {
+    background-color: #1e5adc;
+	}
+
+	.contratarBtn:hover {
+	    background-color: #f0f7ff;
+	}
   
   /* Contenedor de imágenes */
   .containerImg img, .imgFurgon img {

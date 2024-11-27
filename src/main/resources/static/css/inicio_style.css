@@ -672,7 +672,7 @@ input, textarea, select {
 /* vista de pago*/
 
 .containerPagoPrincipal{
-	background-color: #fafafa;
+	background-color: #F0F7FF;
 }
 
 .containerPago{
@@ -694,7 +694,7 @@ input, textarea, select {
 }
 
 .containerPago h1{
-    color: #2C2C2C;
+    color: #2563EB;
     margin-bottom: 15px;
 }
 

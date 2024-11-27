@@ -11,7 +11,7 @@
 	<body>
 		<jsp:include page="/WEB-INF/navigation/nav.jsp" />
 		<div class="faq-container">
-	        <div class="faq-title">Preguntas Frecuentes</div>
+	        <h1 class="faq-title">Preguntas Frecuentes</h1>
 	        <div class="faq-item">
 	            <div class="faq-question">¿Cuáles son las principales normas que rigen al transporte escolar? <span>+</span></div>
 	            <div class="faq-answer">

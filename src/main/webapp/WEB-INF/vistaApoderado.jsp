@@ -16,14 +16,16 @@
 		
 		
 		<div class="container">
-			<h1>Bienvenido de vuelta apoderado <span>${nombre}</span></h1>
-			<div class="row">
-				<h1> Choferes </h1>
+			<h1>Bienvenido de vuelta apoderado ${nombre}</h1>
+			<div class="conductorFilter row">
+				<h1> Conductores </h1>
 			</div>
-			<div class="row"> 
+			<div class="row" id="search"> 
 				<form action="/vista" method="get">
-				    <input type="text" id="searchBar" name="filtro" placeholder="Buscar chofer..." value="${filtro}">
-				    <button type="submit" id="searchButton">Buscar</button>
+					<div class="searchContainer">
+						<input type="text" id="searchBar" name="filtro" placeholder="Buscar conductor..." value="${filtro}">
+				    	<button type="submit" id="searchButton">Buscar</button>
+					</div>
 				</form>
 			</div>
 			<div class="row">

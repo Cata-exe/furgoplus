@@ -25,16 +25,32 @@ body {
     margin: 20px;
 }
 
-.container span {
-	color: #2563EB;
-}
-
 .row {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 20px;
     align-items: center;
+}
+
+.conductorFilter {
+	display: flex;
+	justify-content: center;
+	color: #2563EB;
+}
+
+#search {
+	display: flex;
+	justify-content: center;
+}
+
+.searchContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    margin-bottom: 20px;
 }
 
 .col-3 {
@@ -82,24 +98,23 @@ button:hover {
 }
 
 #searchBar { 
-	width: 80%; 
-	padding: 10px; 
-	margin: 20px; 
-	border: 1px solid #ccc; 
-	border-radius: 5px;
+    width: 600px;
+    padding: 10px; 
+    margin-right: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px;
 }
 
 #searchButton { 
-	padding: 15px;
-    width: 200px;
+    padding: 10px 20px;
     border: none;
     color: white;
     background-color: #2563eb;
-    border-radius: 30px;
-    font-size: 18px;
+    border-radius: 12px;
+    font-size: 16px;
     cursor: pointer;
 } 
 
 #searchButton:hover { 
-	background-color: #1e5adc;
+    background-color: #1e5adc;
 }
