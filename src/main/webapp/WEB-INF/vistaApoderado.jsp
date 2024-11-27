@@ -21,8 +21,10 @@
 				<h1> Choferes </h1>
 			</div>
 			<div class="row"> 
-				<input type="text" id="searchBar" placeholder="Buscar chofer...">
-				<button id="searchButton">Buscar</button>
+				<form action="/vista" method="get">
+				    <input type="text" id="searchBar" name="filtro" placeholder="Buscar chofer..." value="${filtro}">
+				    <button type="submit" id="searchButton">Buscar</button>
+				</form>
 			</div>
 			<div class="row">
 				<c:forEach items="${usuarios}" var="usuario">
@@ -30,8 +32,7 @@
 					<h3> ${usuario.nombre} </h3>
 					<img class="imagen" src="${usuario.imagen}" alt="Imagen ${usuario.nombre}"/>
 
-					<form action="${pageContext.request.contextPath}/detalleChofer" method="GET">
-						<input type="hidden" name="id" value="${usuario.id}" />
+					<form action="/detalleChofer/${usuario.id}" method="GET">
 						<button class="btn btn-success">
 							Detalle
 						</button>

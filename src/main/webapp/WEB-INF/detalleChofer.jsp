@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -24,32 +25,50 @@
             <div class="choferFlexContainer">
               <div class="containerInfo">
                 <h2>Nombre Chofer</h2>
-                <p>Mario Fernandez Montes</p>
+                <p>${chofer.nombre}</p>
                 <h2>Establecimientos</h2>
                 <p>Liceo Bicentenario, Colegio Las Quintas, Jardín Rositas</p>
                 <h2>Cupos</h2>
-                <p>Ocho Asientos</p>
+                <c:forEach var="vehiculo" items="${chofer.vehiculos}">
+                	<p>${vehiculo.cantidad}</p>
+                </c:forEach>
                 <div class="btnInfo">
-                  <input type="button" value="Recomendar">
-                  <input type="button" value="Contratar">
+                  <form action="/calificar" method="GET">
+                  	<button class="btn btn-success">
+						Recomendar
+					</button>
+                  </form>
+                  
+                  <form action="/contratar" method="GET">
+                  	<button class="btn btn-success">
+						Contratar
+					</button>
+                  </form>
+                  
                 </div>
               </div>
               <div class="containerImg">
-                <img src="/img/viejito.jpg" alt="Foto del chofer">
+                <img src="${chofer.imagen}" alt="Foto del chofer">
               </div>
             </div>
           </div>
           
           <div class="containerFurgon">
             <h1>Información Vehiculo</h1>
-            <div class="containerInfoFurgon">
-                <h2>Modelo Vehiculo</h2>
-                <p>Número Patente</p>
-                <h2>Capacidad</h2>
-                <p>18 Asientos</p>
-                <h2>Información Adicional</h2>
-                <p>Furgón con aire acondicionado, asientos bien acolchados, etc etc etc.</p>
-              </div>
+            <c:forEach var="vehiculo" items="${chofer.vehiculos}">
+	            <div class="containerInfoFurgon">
+	            	<h2>Marca</h2>
+	                <p>${vehiculo.marca}</p>
+	                <h2>Modelo</h2>
+	                <p>${vehiculo.modelo}</p>
+	                <h2>Patente</h2>
+	                <p>${vehiculo.patente}</p>
+	                <h2>Capacidad</h2>
+	                <p>${vehiculo.cantidad} Asientos</p>
+	                <h2>Información Adicional</h2>
+	                <p>Furgón con aire acondicionado, asientos bien acolchados, etc etc etc.</p>
+	            </div>
+            </c:forEach>
             
           </div>
         </div>

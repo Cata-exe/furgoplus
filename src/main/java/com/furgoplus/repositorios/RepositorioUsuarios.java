@@ -13,4 +13,5 @@ public interface RepositorioUsuarios extends CrudRepository<Usuario, Long>{
 	List<Usuario> findAll();
 	Usuario findByCorreo(String correo);
 	List<Usuario> findByRol(Rol rol);
+	List<Usuario> findByNombreContainingIgnoreCase(String nombre);
 }

@@ -50,4 +50,9 @@ public class ControladorRutasVarias {
 		return "requisitos.jsp";
     }
 	
+	@GetMapping("/contratar")
+	public String mostrarPago() {
+		return "pago.jsp";
+	}
+	
 }

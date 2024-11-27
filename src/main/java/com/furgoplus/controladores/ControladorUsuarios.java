@@ -1,5 +1,6 @@
 package com.furgoplus.controladores;
 
+import java.util.Comparator;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,6 +9,7 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -40,20 +42,25 @@ public class ControladorUsuarios {
     }
     
     @GetMapping("/vista")
-    public String vistaUsuarios(Model model, HttpSession session) {
+    public String vistaUsuarios(@RequestParam(value = "filtro", required = false) String filtro, Model model, HttpSession session) {
     	Usuario usuario = (Usuario) session.getAttribute("usuario");
-    	System.out.println(usuario);
 
         if (usuario != null && usuario.getRol() != null) {
             if (usuario.getRol() == Rol.apoderado) {
-            	List<Usuario> usuarios = this.servicioUsuarios.obtenerUsuarioChofer(Rol.chofer);
+            	List<Usuario> usuarios; 
+            	if (filtro != null && !filtro.isEmpty()) {
+        	        usuarios = this.servicioUsuarios.buscarChoferesPorNombre(filtro);
+        	    } else {
+        	    	usuarios = this.servicioUsuarios.obtenerUsuarioChofer(Rol.chofer);
+        	    	usuarios.sort(Comparator.comparing(Usuario::getNombre));
+        	    }
             	model.addAttribute("usuarios", usuarios);
+            	model.addAttribute("filtro", filtro);
                 return "vistaApoderado.jsp";
             } else if (usuario.getRol() == Rol.chofer) {
                 return "vistaChofer.jsp";
             }
         }
-
         return "redirect:/login";
     }
 	
@@ -136,16 +143,17 @@ public class ControladorUsuarios {
         return "redirect:/vista";
     }
 	
-    @GetMapping("/detalleChofer")
-    public String detalleChofer(@RequestParam("id") Long choferId, Model model, HttpSession session) {
+    @GetMapping("/detalleChofer/{id}")
+    public String detalleChofer(@PathVariable Long id, Model model, HttpSession session) {
         // Verificar si el usuario está autenticado
         Long userId = (Long) session.getAttribute("id");
         if (userId == null) {
             return "redirect:/login";
         }
+        
+        Usuario chofer = this.servicioUsuarios.obtenerUsuarioId(id);
+        model.addAttribute("chofer", chofer);
 
-        // Obtener los detalles del chofer
-        Usuario chofer = servicioUsuarios.obtenerUsuarioId(choferId);
         return "detalleChofer.jsp";
     }
 }

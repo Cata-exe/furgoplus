@@ -23,7 +23,7 @@
         <div class="inputsRegistro">
             <form:form class="col-6" action="/procesa/registro/apoderado" method="POST" modelAttribute="usuario">
                 <div>
-                    <form:label class="form-label" path="nombre"> Nombre: </form:label>
+                    <form:label class="form-label" path="nombre"> Nombre Completo: </form:label>
                     <form:input class="form-control" path="nombre" />
                     <form:errors class="alert alert-danger d-block" path="nombre" />
                 </div>
@@ -39,7 +39,7 @@
                 </div>
                 <div>
                     <form:label class="form-label" path="confirmacionContrasenia"> Confirmar Contraseña: </form:label>
-                    <form:input class="form-control" path="confirmacionContrasenia" type="password"/>
+                    <form:input class="form-control" path="confirmacionContrasenia"/>
                     <form:errors class="alert alert-danger d-block" path="confirmacionContrasenia" />
                 </div>
                 <button class="btnRegistrarse">

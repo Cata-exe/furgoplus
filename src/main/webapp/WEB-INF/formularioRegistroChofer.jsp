@@ -22,7 +22,7 @@
         <div class="inputsRegistro">
             <form:form class="col-6" action="/procesa/registro/chofer" method="POST" modelAttribute="registroChoferDTO">
                 <div>
-                    <form:label class="form-label" path="usuario.nombre">Nombre:</form:label>
+                    <form:label class="form-label" path="usuario.nombre">Nombre Completo:</form:label>
                     <form:input class="form-control" path="usuario.nombre"/>
                     <form:errors class="alert alert-danger d-block" path="usuario.nombre"/>
                 </div>
@@ -40,6 +40,11 @@
                     <form:label class="form-label" path="usuario.confirmacionContrasenia">Confirmar Contraseña:</form:label>
                     <form:input class="form-control" path="usuario.confirmacionContrasenia" type="password"/>
                     <form:errors class="alert alert-danger d-block" path="usuario.confirmacionContrasenia"/>
+                </div>
+                <div>
+                    <form:label class="form-label" path="usuario.imagen">Imagen:</form:label>
+                    <form:input class="form-control" path="usuario.imagen" type="password"/>
+                    <form:errors class="alert alert-danger d-block" path="usuario.imagen"/>
                 </div>
 
                 <div>
