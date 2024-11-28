@@ -39,7 +39,7 @@
 				    if (isUserLoggedIn) {
 				%>
 						<form action="/registroestudiante" method="get">
-			            	<button id="logoutBtn">Agregar Estudiante</button>
+			            	<button id="estudianteBtn">Agregar Estudiante</button>
 			            </form>
 						<form action="/logout" method="get">
 			            	<button id="logoutBtn">Cerrar sesión</button>

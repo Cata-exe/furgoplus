@@ -61,7 +61,7 @@
 			        </c:forEach>
 			    </div>
 			    <form action="/registrofurgon" method="get">
-	            	<button id="logoutBtn">Agregar Vehiculo</button>
+	            	<button id="vehiculoBtn">Agregar Vehiculo</button>
 	            </form>
 			</div>
             

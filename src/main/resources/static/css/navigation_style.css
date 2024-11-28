@@ -59,7 +59,7 @@
 }
 
 #loginBtn:hover, 
-#registroBtn:hover, #logoutBtn{
+#registroBtn:hover, #logoutBtn:hover , #estudianteBtn:hover{
     cursor: pointer;
 }
 
@@ -78,7 +78,7 @@
     background-color: #1e5adc;
 }
 
-#registroBtn, #logoutBtn {
+#registroBtn, #logoutBtn, #estudianteBtn {
     padding: 12px;
     width: 130px;
     border: none;
@@ -90,9 +90,20 @@
 }
 
 #logoutBtn {
-	width: 150px;
+    border: solid 2px #2563eb;
+    width: 150px;
 }
 
+#estudianteBtn {
+    width: 180px;
+    border: solid 2px #2563eb;
+    background-color: white;
+    color: #2563eb;
+}
+
+#estudianteBtn:hover {
+    background-color: #f0f7ff;
+}
 
 /* Footer */
 
