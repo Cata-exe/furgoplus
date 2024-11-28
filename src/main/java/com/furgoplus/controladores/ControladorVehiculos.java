@@ -36,7 +36,7 @@ public class ControladorVehiculos {
     }
 	
 	@PostMapping("/procesa/registro/vehiculo")
-	public String agregarEstudiante(@Valid @ModelAttribute Vehiculo vehiculo, HttpSession session, BindingResult validation) {
+	public String agregarEstudiante(@Valid @ModelAttribute Vehiculo vehiculo, BindingResult validation, HttpSession session) {
 		if (validation.hasErrors()) {
             return "formularioAgregarVehiculo.jsp";
         }

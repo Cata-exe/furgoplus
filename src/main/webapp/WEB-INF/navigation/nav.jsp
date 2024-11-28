@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ page import="com.furgoplus.modelos.Usuario" %>
+<%@ page import="com.furgoplus.modelos.Rol" %>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -11,6 +13,7 @@
 		<%
 		    String isUserLoggedInParam = request.getParameter("isUserLoggedIn");
 		    boolean isUserLoggedIn = Boolean.parseBoolean(isUserLoggedInParam);
+		    Usuario usuario = (Usuario) session.getAttribute("usuario");
 		%>
 		<nav class="navbar">
 			<a href="/">
@@ -19,8 +22,7 @@
 		            <p>Transporte Escolar</p>
 		        </div>
 			</a>
-	        
-			
+
 			<%
 			    if (!isUserLoggedIn) {
 			%>
@@ -33,14 +35,19 @@
 			<%
 			    }
 			%>
-	       
+			
 	        <div class="navBtns">
 				<%
 				    if (isUserLoggedIn) {
+				        // Mostrar el botón solo si el usuario es un apoderado
+				        if (usuario != null && usuario.getRol() == Rol.apoderado) {
 				%>
 						<form action="/registroestudiante" method="get">
 			            	<button id="estudianteBtn">Agregar Estudiante</button>
 			            </form>
+				<%
+				        }
+				%>
 						<form action="/logout" method="get">
 			            	<button id="logoutBtn">Cerrar sesión</button>
 			            </form>

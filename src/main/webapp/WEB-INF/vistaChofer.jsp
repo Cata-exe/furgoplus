@@ -60,9 +60,11 @@
 			            </div>
 			        </c:forEach>
 			    </div>
-			    <form action="/registrofurgon" method="get">
-	            	<button id="vehiculoBtn">Agregar Vehiculo</button>
-	            </form>
+			    <c:if test="${empty vehiculos}">
+				    <form action="/registrofurgon" method="get">
+				        <button id="vehiculoBtn">Agregar Vehículo</button>
+				    </form>
+				</c:if>
 			</div>
             
         </div>
@@ -164,8 +166,8 @@
                 <span class="estrellaReview">★★★★★</span>
                 <span>Hace 3 dias</span>
             </div>
-            <p>"Excelente servicio. Juan es muy puntual y responsable. Los niños se sienten seguros con él."</p>
-            <p>- María G., madre de Sofía</p>
+            <p>"Excelente servicio. ${usuario.nombre} es muy puntual y responsable. Los niños se sienten seguros con él."</p>
+            <p>- María G.</p>
 
             <!--de nuevo poquito relleno para ayudar con el tema de los tamaños y que no se bugee despues-->
 
@@ -173,15 +175,15 @@
                 <span class="estrellaReview">★★★★</span>
                 <span>Hace 1 semanas</span>
             </div>
-            <p>"Muy buen servicio. Juan es puntual y muy responsable. Los niños se sienten muy seguros con él."</p>
-            <p>- Carlos M., padre de Valentina</p>
+            <p>"Muy buen servicio. ${usuario.nombre} es puntual y muy responsable. Los niños se sienten muy seguros con él."</p>
+            <p>- Carlos M.</p>
 
             <div class="valoraciones">
                 <span class="estrellaReview">★★★★★</span>
                 <span>Hace 3 semanas</span>
             </div>
-            <p>"Excelente atención. Juan es siempre puntual y muy profesional. Los niños disfrutan mucho del viaje."</p>
-            <p>- Laura R., madre de Mateo</p>
+            <p>"Excelente atención. ${usuario.nombre} es siempre puntual y muy profesional. Los niños disfrutan mucho del viaje."</p>
+            <p>- Laura R.</p>
 
             <!--hasta aca :3-->
         </div>

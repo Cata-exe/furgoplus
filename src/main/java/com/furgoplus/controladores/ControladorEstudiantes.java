@@ -45,7 +45,7 @@ public class ControladorEstudiantes {
     }
 	
 	@PostMapping("/procesa/registro/estudiante")
-	public String agregarEstudiante(@Valid @ModelAttribute Estudiante estudiante, HttpSession session, BindingResult validation) {
+	public String agregarEstudiante(@Valid @ModelAttribute Estudiante estudiante, BindingResult validation, HttpSession session) {
 		if (validation.hasErrors()) {
             return "formularioAgregarEstudiante.jsp";
         }
