@@ -18,7 +18,7 @@
 		<div class="container">
 			<h1>Bienvenido de vuelta apoderado ${nombre}</h1>
 			
-			<div class="row cardEstudiantes">
+			<div class="cardEstudiantes">
 				<c:if test="${empty estudiantes}">
 			        <p>No hay estudiantes a cargo.</p>
 			    </c:if>
