@@ -84,11 +84,13 @@ public class ControladorUsuarios {
             	List<Vehiculo> vehiculos = this.servicioVehiculos.obtenerVehiculosPorUsuario(usuario.getId());
                 List<DocumentoChofer> documentosChoferes = this.servicioDocumentosChofer.obtenerDocumentosPorUsuario(usuario.getId());
                 List<Reunion> reuniones = this.servicioReuniones.obtenerReunionesPorUsuario(usuario.getId());
+                List<Estudiante> estudiantes = this.servicioEstudiantes.obtenerTodos();
                 
                 model.addAttribute("chofer", usuario);
                 model.addAttribute("vehiculos", vehiculos); 
                 model.addAttribute("documentosChoferes", documentosChoferes); 
                 model.addAttribute("reuniones", reuniones);
+                model.addAttribute("estudiantes", estudiantes);
                 
                 return "vistaChofer.jsp";
             }
@@ -187,6 +189,17 @@ public class ControladorUsuarios {
         model.addAttribute("chofer", chofer);
 
         return "detalleChofer.jsp";
+    }
+    
+    @GetMapping("/contratar/{choferId}")
+    public String mostrarPago(@PathVariable Long choferId, Model model) {
+        Usuario chofer = this.servicioUsuarios.obtenerUsuarioId(choferId); 
+        model.addAttribute("chofer", chofer);
+
+        List<Vehiculo> vehiculos = chofer.getVehiculos(); 
+        model.addAttribute("vehiculos", vehiculos);
+
+        return "pago.jsp";  
     }
 }
     

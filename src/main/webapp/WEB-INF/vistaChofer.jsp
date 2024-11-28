@@ -135,18 +135,24 @@
 		                <th>Dirección</th>
 		                <th>Apoderado</th>
 		                <th>Teléfono Apoderado</th>
+		                <th>Acción</th>
+		                
 		            </tr>
 		        </thead>
 		        <tbody>
+		        	<c:if test="${empty estudiantes}">
+				        <p>No hay estudiantes a cargo.</p>
+				    </c:if>
 		            <!-- Iterando sobre los pasajeros desde la base de datos -->
-		            <c:forEach var="pasajero" items="${pasajeros}">
+		            <c:forEach var="estudiante" items="${estudiantes}">
 		                <tr>
-		                    <td>${pasajero.nombre}</td>
-		                    <td>${pasajero.edad}</td>
-		                    <td>${pasajero.escuela}</td>
-		                    <td>${pasajero.direccion}</td>
-		                    <td>${pasajero.apoderado}</td>
-		                    <td>${pasajero.telefonoApoderado}</td>
+		                    <td>${estudiante.nombre}</td>
+		                    <td>${estudiante.edad}</td>
+		                    <td>${estudiante.establecimiento.nombre}</td>
+		                    <td>${estudiante.direccion}</td>
+		                    <td>${estudiante.apoderado.usuario.nombre}</td>
+		                    <td>${estudiante.apoderado.usuario.celular}</td>
+		                    <td><a href="#">Dar de baja</a></td>
 		                </tr>
 		            </c:forEach>
 		        </tbody>
@@ -156,7 +162,7 @@
             <h2>Reseñas Recientes</h2>
             <div class="valoraciones">
                 <span class="estrellaReview">★★★★★</span>
-                <span>Hace 2 semanas</span>
+                <span>Hace 3 dias</span>
             </div>
             <p>"Excelente servicio. Juan es muy puntual y responsable. Los niños se sienten seguros con él."</p>
             <p>- María G., madre de Sofía</p>
@@ -164,18 +170,18 @@
             <!--de nuevo poquito relleno para ayudar con el tema de los tamaños y que no se bugee despues-->
 
             <div class="valoraciones">
-                <span class="estrellaReview">★★★★★</span>
-                <span>Hace 2 semanas</span>
+                <span class="estrellaReview">★★★★</span>
+                <span>Hace 1 semanas</span>
             </div>
-            <p>"Excelente servicio. Juan es muy puntual y responsable. Los niños se sienten seguros con él."</p>
-            <p>- María G., madre de Sofía</p>
+            <p>"Muy buen servicio. Juan es puntual y muy responsable. Los niños se sienten muy seguros con él."</p>
+            <p>- Carlos M., padre de Valentina</p>
 
             <div class="valoraciones">
                 <span class="estrellaReview">★★★★★</span>
-                <span>Hace 2 semanas</span>
+                <span>Hace 3 semanas</span>
             </div>
-            <p>"Excelente servicio. Juan es muy puntual y responsable. Los niños se sienten seguros con él."</p>
-            <p>- María G., madre de Sofía</p>
+            <p>"Excelente atención. Juan es siempre puntual y muy profesional. Los niños disfrutan mucho del viaje."</p>
+            <p>- Laura R., madre de Mateo</p>
 
             <!--hasta aca :3-->
         </div>

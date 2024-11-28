@@ -40,7 +40,7 @@
 					</button>
                   </form>
                   
-                  <form action="/contratar" method="GET">
+                  <form action="/contratar/${chofer.id}" method="GET">
                   	<button class="contratarBtn">
 						Contratar
 					</button>
