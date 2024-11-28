@@ -17,9 +17,19 @@
 		
 		<div class="container">
 			<h1>Bienvenido de vuelta apoderado ${nombre}</h1>
-			<c:forEach items="${estudiantes}" var="estudiante">
-				<a>${estudiante.nombre}</a>
-			</c:forEach>
+			<h1 class="h1Estudiantes">Estudiantes a cargo</h1>
+			<div class="row cardEstudiantes">
+				<c:if test="${empty estudiantes}">
+			        <p>No hay estudiantes a cargo.</p>
+			    </c:if>
+				<c:forEach items="${estudiantes}" var="estudiante">
+				<div class="col-3 tarjeta-usuario tarjetaEstudiante">
+					<h3> ${estudiante.nombre} </h3>
+					<span> Edad: ${estudiante.edad} años </span>
+					<span> Direccion: ${estudiante.direccion} </span>
+				</div>
+				</c:forEach>
+			</div>
 			<div class="conductorFilter row">
 				<h1> Conductores </h1>
 			</div>

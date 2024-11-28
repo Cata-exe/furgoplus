@@ -25,6 +25,16 @@ body {
     margin: 20px;
 }
 
+.container .h1Estudiantes{
+	color: #2563EB;
+    text-align: start;
+}
+
+.cardEstudiantes p{
+	font-size: 120%;
+	margin-left: 20px;
+}
+
 .row {
     display: flex;
     flex-wrap: wrap;
@@ -75,6 +85,19 @@ body {
 
 .tarjeta-usuario:hover{
 	box-shadow: rgba(0, 0, 0, 0.24) 0px 6px 15px;
+}
+
+.tarjetaEstudiante{
+	border: 1px solid #dee2e6;
+    border-radius: 8px;
+    gap: 5px;
+    width: 100%;
+    box-shadow: none;
+    color: #000000;
+}
+
+.tarjetaEstudiante:hover{
+	box-shadow: none;
 }
 
 .imagen {
